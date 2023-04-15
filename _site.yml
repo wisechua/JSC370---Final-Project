@@ -1,7 +1,16 @@
 name: "my-website"
 output_dir: "."
 navbar:
-  title: "My Website"
+  title: "Search Trends in 2022 on Sports Event"
   left:
-    - text: "Home"
+    - text: "Search Hits by Map"
       href: index.html
+    - text: "Search Hits by Location"
+      href: second_tab.html
+    - text: "Midterm Project"
+      href: Midterm_Project.html
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    css: styles.css

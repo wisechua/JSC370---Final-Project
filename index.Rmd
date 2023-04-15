@@ -7,7 +7,6 @@ output:
         toc_float: TRUE
 ---
 
-This is my JSC370 Final Project website.
 
 ```{r setup, echo=FALSE, message = FALSE}
 knitr::opts_chunk$set(
@@ -27,6 +26,7 @@ library(knitr)
 library(kableExtra)
 library(gganimate)
 library(viridis)
+library(plotly)
 ```
 
 ```{r, warning=FALSE, echo=FALSE, include=TRUE}
@@ -60,17 +60,16 @@ rownames(df) <- c("2022 Qatar World Cup 5 Search Keywords", "2022 Qatar World Cu
 ```
 
 
-```{r, warning=FALSE, echo=FALSE}
-kable(df, caption = "Table 1: Keywords to Search on Google Trends for Each Sports Events") %>% kable_classic(full_width = TRUE, html_font = "Cambria", font_size=14)
-```
-
 ```{r, warning=FALSE, echo=FALSE, include=TRUE, message=FALSE}
 world_cup_1 <- gtrends(c("world cup 2022", "world cup", "2022 world cup", "qatar world cup", "fifa world cup"), time = "2022-01-01 2022-12-31", gprop = c("web"))
 ```
 
 ```{r, warning=FALSE, echo=FALSE, include=TRUE, message=FALSE}
 world_cup_2 <- gtrends(c("fifa", "fifa world cup 2022", "fifa 2022", "2022 world cup schedule", "qatar 2022 world cup"), time = "2022-01-01 2022-12-31", gprop = c("web"))
+```
 
+
+```{r, warning=FALSE, echo=FALSE, include=TRUE, message=FALSE}
 world_cup_3 <- gtrends(c("world cup 2022 fixtures", "world cup football 2022", "world cup 2022 live", "world cup live", "world cup table 2022"), time = "2022-01-01 2022-12-31", gprop = c("web"))
 ```
 
@@ -120,24 +119,6 @@ world_cup_interest_by_city <- world_cup_interest_by_city %>%
 colnames(world_cup_interest_by_city) <- c("City", "Hits")
 ```
 
-```{r, warning=FALSE, echo=FALSE}
-kables(
-  list(
-    kable(head(world_cup_interest_by_city)) ,
-    kable(head(world_cup_interest_by_country)) ,
-    kable(head(world_cup_interest_by_dma)) 
-  ),
-  caption = 'Table 2: First six rows of the World Cup Data by City, Country and District.'
-)%>% kable_classic(full_width = TRUE, html_font = "Cambria", font_size=14)
-```
-
-
-
-
-
-
-
-
 ```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
 olympic_games_1 <- gtrends(c("2022 winter olympic", "olympic games beijing 2022", "olympic games 2022", "beijing olympics 2022", "winter olympic games"), time = "2022-01-01 2022-12-31", gprop = c("web"))
 ```
@@ -146,12 +127,9 @@ olympic_games_1 <- gtrends(c("2022 winter olympic", "olympic games beijing 2022"
 olympic_games_2 <- gtrends(c("olympics 2022", "olympics", "winter games 2022", "winter olympics", "olympic games"), time = '2022-01-01 2022-12-31', gprop = c("web"))
 ```
 
-
 ```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
 olympic_games_3 <- gtrends(c("2022 winter olympic games", "winter olympic games 2022", "olympic medals 2022", "winter olympic medal 2022", "beijing 2022"), time = '2022-01-01 2022-12-31', gprop = c("web"))
 ```
-
-
 
 ```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
 olympic_games_interest_over_time <- bind_rows(olympic_games_1$interest_over_time, olympic_games_2$interest_over_time, olympic_games_3$interest_over_time)
@@ -165,7 +143,10 @@ olympic_games_interest_over_time_summary <- olympic_games_interest_over_time %>%
 
 
 ```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
+olympic_games_1$interest_by_country$hits <- as.integer(olympic_games_1$interest_by_country$hits)
+olympic_games_2$interest_by_country$hits <- as.integer(olympic_games_2$interest_by_country$hits)
 olympic_games_interest_by_country <- bind_rows(olympic_games_1$interest_by_country, olympic_games_2$interest_by_country, olympic_games_3$interest_by_country)
+
 olympic_games_interest_by_country$hits[olympic_games_interest_by_country$hits == '<1'] <- 0
 olympic_games_interest_by_country$hits <- as.integer(olympic_games_interest_by_country$hits)
 olympic_games_interest_by_country <- olympic_games_interest_by_country %>% 
@@ -200,16 +181,7 @@ olympic_games_interest_by_city <- olympic_games_interest_by_city %>%
 colnames(olympic_games_interest_by_city) <- c("City", "Hits")
 ```
 
-```{r, warning=FALSE, echo=FALSE}
-kables(
-  list(
-    kable(head(olympic_games_interest_by_city)),
-    kable(head(olympic_games_interest_by_country)),
-    kable(head(olympic_games_interest_by_dma))
-  ),
-  caption = 'Table 3: First six rows of the Olympic Games Data by City, Country and District.'
-) %>% kable_classic(full_width = TRUE, html_font = "Cambria", font_size=14)
-```
+
 
 ```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
 commonwealth_games_1 <- gtrends(c("2022 birmingham commonwealth games", "2022 birmingham commonwealth", "commonwealth games", "commonwealth games 2022", "2022 commonwealth games"), time = '2022-01-01 2022-12-31', gprop = c("web"))
@@ -273,16 +245,6 @@ commonwealth_games_interest_by_city <- commonwealth_games_interest_by_city %>%
 colnames(commonwealth_games_interest_by_city) <- c("City", "Hits")
 ```
 
-```{r, warning=FALSE, echo=FALSE}
-kables(
-  list(
-    kable(head(commonwealth_games_interest_by_city)),
-    kable(head(commonwealth_games_interest_by_country)),
-    kable(head(commonwealth_games_interest_by_dma))
-  ),
-  caption = 'Table 4: First six rows of the Commonwealth Games Data by City, Country and District.'
-) %>% kable_classic(full_width = TRUE, html_font = "Cambria", font_size=14)
-```
 
 
 
@@ -348,16 +310,6 @@ lol_games_interest_by_city <- lol_games_interest_by_city %>%
 colnames(lol_games_interest_by_city) <- c("City", "Hits")
 ```
 
-```{r, warning=FALSE, echo=FALSE}
-kables(
-  list(
-    kable(head(lol_games_interest_by_city)),
-    kable(head(lol_games_interest_by_country)),
-    kable(head(lol_games_interest_by_dma))
-  ),
-  caption = 'Table 5: First six rows of the League of Legends Games Data by City, Country and District.'
-) %>% kable_classic(full_width = TRUE, html_font = "Cambria", font_size=14)
-```
 
 
 ```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
@@ -426,16 +378,7 @@ dota_games_interest_by_city <- dota_games_interest_by_city %>%
 colnames(dota_games_interest_by_city) <- c("City", "Hits")
 ```
 
-```{r, warning=FALSE, echo=FALSE,}
-kables(
-  list(
-    kable(head(dota_games_interest_by_city)),
-    kable(head(dota_games_interest_by_country)),
-    kable(head(dota_games_interest_by_dma))
-  ),
-  caption = 'Table 6: First six rows of the Dota Games Data by City, Country and District.'
-) %>% kable_classic(full_width = TRUE, html_font = "Cambria", font_size=14)
-```
+
 
 ```{r, warning=FALSE, echo=FALSE}
 interest_by_city_list <- list(world_cup_interest_by_city, olympic_games_interest_by_city, commonwealth_games_interest_by_city, lol_games_interest_by_city, dota_games_interest_by_city)
@@ -462,114 +405,30 @@ interest_by_country_combine$Hits[is.nan(interest_by_country_combine$Hits)] <- NA
 interest_by_country_combine <- filter(interest_by_country_combine,rowSums(is.na(interest_by_country_combine)) != ncol(interest_by_country_combine) - 1)
 colnames(interest_by_country_combine) <- c("Country", "World Cup Hits", "Olympic Games Hits", "Commonwealth Games Hits", "League of Legends Hits", "Dota 2 Hits")
 ```
-
-```{r, warning=FALSE, echo=FALSE}
-interest_by_dma_list <- list(world_cup_interest_by_dma, olympic_games_interest_by_dma, commonwealth_games_interest_by_dma, lol_games_interest_by_dma, dota_games_interest_by_dma)
-interest_by_dma_combine <- interest_by_dma_list %>% reduce(full_join, by='District')
-interest_by_dma_combine <- data.frame(interest_by_dma_combine)
-interest_by_dma_combine$Hits.x[is.nan(interest_by_dma_combine$Hits.x)] <- NA
-interest_by_dma_combine$Hits.y[is.nan(interest_by_dma_combine$Hits.y)] <- NA
-interest_by_dma_combine$Hits.x.x[is.nan(interest_by_dma_combine$Hits.x.x)] <- NA
-interest_by_dma_combine$Hits.y.y[is.nan(interest_by_dma_combine$Hits.y.y)] <- NA
-interest_by_dma_combine$Hits[is.nan(interest_by_dma_combine$Hits)] <- NA
-interest_by_dma_combine <- filter(interest_by_dma_combine,rowSums(is.na(interest_by_dma_combine)) != ncol(interest_by_dma_combine) - 1)
-colnames(interest_by_dma_combine) <- c("District", "World Cup Hits", "Olympic Games Hits", "Commonwealth Games Hits", "League of Legends Hits", "Dota 2 Hits")
+## Average Search Hits in Countries for Different Sport Events {.tabset}
+### World Cup
+```{r}
+World_cup_map <- interest_by_country_combine %>% plot_geo(type='choropleth', locations=interest_by_country_combine$Country, locationmode = "country names", z=interest_by_country_combine$`World Cup Hits`, text=interest_by_country_combine$Country)%>% layout(showlegend=FALSE)
+World_cup_map
+```
+### Commonwealth Games
+```{r}
+Commonwealth_map <- interest_by_country_combine %>% plot_geo(type='choropleth', locations=interest_by_country_combine$Country, locationmode = "country names", z=interest_by_country_combine$`Commonwealth Games Hits`, text=interest_by_country_combine$Country)%>% layout(showlegend=FALSE)
+Commonwealth_map
+```
+### Olympic
+```{r}
+Olympic_map <- interest_by_country_combine %>% plot_geo(type='choropleth', locations=interest_by_country_combine$Country, locationmode = "country names", z=interest_by_country_combine$`Olympic Games Hits`, text=interest_by_country_combine$Country)%>% layout(showlegend=FALSE)
+Olympic_map
+```
+### League of Legend
+```{r}
+League_of_Legend_map <- interest_by_country_combine %>% plot_geo(type='choropleth', locations=interest_by_country_combine$Country, locationmode = "country names", z=interest_by_country_combine$`League of Legends Hits`, text=interest_by_country_combine$Country)%>% layout(showlegend=FALSE)
+League_of_Legend_map
+```
+### Dota 2
+```{r}
+Dota_2_map <- interest_by_country_combine %>% plot_geo(type='choropleth', locations=interest_by_country_combine$Country, locationmode = "country names", z=interest_by_country_combine$`Dota 2 Hits`, text=interest_by_country_combine$Country) %>% layout(showlegend=FALSE)
+Dota_2_map
 ```
 
-```{r, warning=FALSE, echo=FALSE, width=17}
-interest_by_city_combine_1 <- filter(interest_by_city_combine,rowSums(is.na(interest_by_city_combine)) <= ncol(interest_by_city_combine) - 3)
-interest_by_city_combine_1[is.na(interest_by_city_combine_1)] <- 0
-interest_by_city_combine_1 %>% 
-  pivot_longer(names_to = "Games", values_to = "Hits", cols = c(2:6)) %>% 
-  ggplot(mapping = aes(x = fct_infreq(City, Hits), y= Hits, fill = Games)) + 
-  geom_bar(stat = "identity") +
-  scale_fill_brewer(palette = "Set3") + 
-  scale_x_discrete(guide = guide_axis(n.dodge=4)) +
-  labs(
-    title = "Hits of Each Sports Event by City",
-    x = "City", y = "Hits", fill = "Sport Events",
-    caption = "Table 7: Cities that has at least 3 values of hits in the 5 sport events"
-    )
-```
-
-```{r echo=FALSE, warning=FALSE}
-interest_by_country_combine_1 <- filter(interest_by_country_combine,rowSums(is.na(interest_by_country_combine)) == ncol(interest_by_country_combine) - 6)
-interest_by_country_combine_1 %>% 
-  pivot_longer(names_to = "Games", values_to = "Hits", cols = c(2:6)) %>% 
-  ggplot(mapping = aes(x = fct_infreq(Country, Hits), y= Hits, fill = Games)) + 
-  geom_bar(stat = "identity") +
-  scale_fill_brewer(palette = "Set3") + 
-  scale_x_discrete(guide = guide_axis(n.dodge=4)) +
-  labs(
-    title = "Countries with all Sport Events Search Hits",
-    x = "Country", y = "Hits", fill = "Sport Events",
-    caption = "Table 8: Countries that has all 5 sport events of search hits"
-    )
-```
-
-```{r, warning=FALSE, echo=FALSE, warning=FALSE}
-interest_by_dma_combine_1 <- filter(interest_by_dma_combine,rowSums(is.na(interest_by_dma_combine)) == ncol(interest_by_dma_combine) - 6)
-
-interest_by_dma_combine_1 <- interest_by_dma_combine_1 %>% pivot_longer(names_to = "Games", values_to = "Hits", cols = c(2:6)) %>% 
-  group_by(District) %>% mutate(Hits = Hits, Games = Games, total_Hits = sum(Hits)) %>% arrange(desc(total_Hits)) 
-interest_by_dma_combine_1 <- data.frame(interest_by_dma_combine_1) %>% 
-  slice_head(n = 50)
-
-interest_by_dma_combine_1 %>% 
-  ggplot(mapping = aes(x = fct_infreq(District, Hits), y= Hits, fill = Games)) + 
-  geom_bar(stat = "identity") +
-  scale_fill_brewer(palette = "Set3") + 
-  scale_x_discrete(guide = guide_axis(n.dodge=4)) +
-  labs(
-    title = "Hits of Each Sports Event by District",
-    x = "District", y = "Hits", fill = "Games",
-    caption = "Table 9 : Districts that has all 5 sport events of search hits"
-    )
-```
-
-```{r, warning=FALSE, echo=FALSE}
-
-kables(list(
-  kable(summary(world_cup_interest_over_time_summary), caption = "Summary Results for World Cup Search Trend") ,
-  kable(summary(olympic_games_interest_over_time_summary), caption = "Summary Results for Olympic Games Search Trend")), caption = "Table 10: Summary Results for All Sport Events Search Trend with Time") %>% kable_classic( html_font = "Cambria", font_size=14)
-kables(list(
-  kable(summary(commonwealth_games_interest_over_time_summary), caption = "Summary Results for Commonwealth Games Search Trend"),
-  kable(summary(lol_games_interest_over_time_summary), caption = " Summary Results for League of Legends Search Trend with Time") ))%>% kable_classic( html_font = "Cambria", font_size=14)
-kables(list(
-  kable(summary(dota_games_interest_over_time_summary), caption = " Summary Results for League of Legends Search Trend with Time") ))%>% kable_classic( html_font = "Cambria", font_size=14)
-
-```
-
-```{r, warning = FALSE, echo=FALSE, message=FALSE}
-interest_over_time_list <- list(world_cup_interest_over_time_summary, olympic_games_interest_over_time_summary, commonwealth_games_interest_over_time_summary, lol_games_interest_over_time_summary, dota_games_interest_over_time_summary)
-interest_over_time_combine <- interest_over_time_list %>% reduce(full_join, by='date')
-interest_over_time_combine <- data.frame(interest_over_time_combine)
-colnames(interest_over_time_combine) <- c("Date", "World Cup Hits", "Olympic Games Hits", "Commonwealth Games Hits", "League of Legends Hits", "Dota 2 Hits")
-interest_over_time_combine <- interest_over_time_combine %>% pivot_longer(names_to = "Games", values_to = "Hits", cols = c(2:6))
-
-colnames(interest_over_time_combine) <- c("Date", "Sport Events", "Hits")
-```
-
-
-```{r, warning = FALSE, echo=FALSE, message=FALSE}
-interest_over_time_combine %>%
-  ggplot(aes(x=Date, y=`Hits`, group=`Sport Events`, color=`Sport Events`)) +
-  geom_line() +
-  geom_point() +
-  scale_color_viridis(discrete = TRUE) +
-  ggtitle("Search Trends over Dates in 2022 for Different Sport Events") +
-  ylab("Search Hits Trends") +
-  labs(fill = "Sport Event") +
-  theme_light() +
-  transition_reveal(Date)
-```
-
-```{r, warning = FALSE, message=FALSE, echo=FALSE}
-interest_over_time_combine |> 
-  ggplot() + geom_line(mapping = aes(x = Date, y = Hits, colour = `Sport Events`)) +
-  # Use facets
-  facet_wrap(~ `Sport Events`, nrow = 5) +
-  labs(fill = "Sport Event") +
-  scale_color_viridis(discrete = TRUE) +
-  theme_minimal() 
-```
