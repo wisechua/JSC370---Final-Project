@@ -22,4 +22,4 @@ Project website: <https://wisechua.github.io/JSC370_Final_Project/>
 
 ### Pdf File
 
-Project Pdf:
+Project Pdf: <https://github.com/wisechua/JSC370_Final_Project/raw/master/PDF%20Report/JSC370-Final-Project-Report.pdf>

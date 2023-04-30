@@ -23,7 +23,7 @@ For this research, we would want to find the different searching trends for spor
 
 ## Access the project
 
-- [Pdf Report](https://support.google.com/trends/answer/4365533?hl=en): The report does not contains any interactive materials and all interactive material on the pdf can be found from the website.
+- [Pdf Report](https://github.com/wisechua/JSC370_Final_Project/raw/master/PDF%20Report/JSC370-Final-Project-Report.pdf): The report does not contains any interactive materials and all interactive material on the pdf can be found from the website.
 
 - [Github](https://github.com/wisechua/JSC370_Final_Project): All files related to this project can be found here.
 
