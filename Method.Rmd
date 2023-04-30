@@ -28,6 +28,8 @@ Since we are comparing over 5 different major sports events, the data set will b
 
 Note that since Google trends does not store information for locations that have extremely low search hits, the results from each enquiry of Gtrends package may not always contain the same countries, cities, and major designated market areas in each query to Google trends.
 
+The unit for the search hits are calculated by a sample of Google searches. Google uses re-sampling data on that sample and by having the resampling data, it become the representative of all Google searches. Thereafter, it normalized the search data by location, time, and between different terms. A more detail on the search results can be found at [Google Trends Help](https://support.google.com/trends/answer/4365533?hl=en).
+
 The table below shows the keywords that we used for each sport events. It has the initial 5 keywords that we started with and the remaining 10 keywords based on the related queries.
 ```{r, warning=FALSE, echo=FALSE, include=TRUE}
 `2022 Qatar World Cup 5 Search Keywords` <- c("world cup 2022", "world cup", "2022 world cup", "qatar world cup", "fifa world cup")
