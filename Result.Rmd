@@ -60,6 +60,14 @@ dota_games_interest_by_city <- read.csv("data/dota_games_interest_by_city.csv")
 Below are the summary results for the search trends for each sports event from 2022/01/01 to 2022/12/31 worldwide. 
 
 ```{r, warning=FALSE, echo=FALSE}
+world_cup_interest_over_time_summary$date <- as.Date(world_cup_interest_over_time_summary$date)
+olympic_games_interest_over_time_summary$date <- as.Date(olympic_games_interest_over_time_summary$date)
+commonwealth_games_interest_over_time_summary$date <- as.Date(commonwealth_games_interest_over_time_summary$date)
+lol_games_interest_over_time_summary$date <- as.Date(lol_games_interest_over_time_summary$date)
+dota_games_interest_over_time_summary$date <- as.Date(dota_games_interest_over_time_summary$date)
+```
+
+```{r, warning=FALSE, echo=FALSE}
 
 kables(list(
   kable(summary(world_cup_interest_over_time_summary, align = "c"), caption = "Summary Results for World Cup Search Trend") ,
