@@ -1,0 +1,37 @@
+---
+title: "Conclusion"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(gtrendsR)
+library(knitr)
+library(kableExtra)
+library(gganimate)
+library(viridis)
+library(plotly)
+```
+
+
+In this project, we were to find the relationship of search trends in people for different sport events that occurred in 2022. Based on the line graphs and summary statistics table, we can see that the search queries increase significantly during the event and the search queries will decrease significantly. During other periods of time than the event time, there are relatively low search queries and most events will have no search queries. For the World Cup, there are more search queries even after the event compared to others. This could be due to the World Cup is an event that everyone around the world will be following compared to other events that have lower popularity. For esports events, we can see that even it is not during the championship game period, the search trend will stay fluctuating throughout the year, this could be due to event structure are based on the teams performance throughout the year. 
+
+An interesting result from the peak of each events was the sports events will have a higher peak than esports events. We can see that from the summary statistics table that their maximum value was higher than esports while their median are lower than esports events. Notice that for all sports events, the third quartile have a lower values than esports event which also represents most of the data are very small.
+
+
+### Limitations
+
+There are several limitations in this research. First of all, there are several empty values in the city, country and designated market area data frame as Google trends does not capture all search queries in those regions. Google only keep partial of these data and will if the search hits in the region are too low or none, it will not appeared in the generated results. These empty values result in the data in different cities, countries, and designated market area being very limited as we can't compare different regions very well. We limited the queries from January 2022 to December 2022, but some of the events happened at the beginning of 2022 and some events occurred during the end of 2022. This could highly affect the comparison of the queries between before and after the events. Finally, the units in the search hits are relatively wierd scale, based on Google documentation, the search hits are based on topic's proportion to all searches on all topics. The sample searching that Google used might not be representative. Some other limitations could be the keywords that we chose are not representative to the event.
+
+### Future Steps
+
+My plan for the future steps is to incorporate different small events that occurred in the Games and we look deeper into those trends. Also, I would want to change the time trends and look at different timing of each Sports event based on one week before the event starts to one week after the event. Furthermore, look at other sport events that also occurred in 2022 and consider whether events that had been postponed by COVID-19 have different trends with events that were originally planned for 2022. If it is possible, I would want to try comparing with other search engines such as Yahoo or Bing on the same events to see whether there is any difference.
+
+---

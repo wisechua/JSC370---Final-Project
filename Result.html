@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Results</title>
+
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">JSC370 Final Project</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="Method.html">Methods</a>
+</li>
+<li>
+  <a href="Result.html">Results</a>
+</li>
+<li>
+  <a href="Conclusion.html">Conclusions</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Results</h1>
+
+</div>
+
+
+<div id="preliminary-results" class="section level2">
+<h2>Preliminary Results</h2>
+<p>Below are the summary results for the search trends for each sports
+event from 2022/01/01 to 2022/12/31 worldwide.</p>
+<table class="kable_wrapper lightable-classic" style="font-size: 14px; font-family: Cambria; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+Table 7: Summary Results for All Sport Events Search Trend with Time
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<caption>
+Summary Results for World Cup Search Trend
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+date
+</th>
+<th style="text-align:left;">
+hits
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Length:52
+</td>
+<td style="text-align:left;">
+Min. : 0.3333
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Class :character
+</td>
+<td style="text-align:left;">
+1st Qu.: 0.4000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Mode :character
+</td>
+<td style="text-align:left;">
+Median : 0.7333
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Mean : 4.5449
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+3rd Qu.: 1.4667
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Max. :49.8000
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption>
+Summary Results for Olympic Games Search Trend
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+date
+</th>
+<th style="text-align:left;">
+hits
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Length:52
+</td>
+<td style="text-align:left;">
+Min. : 0.4000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Class :character
+</td>
+<td style="text-align:left;">
+1st Qu.: 0.4667
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Mode :character
+</td>
+<td style="text-align:left;">
+Median : 0.6000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Mean : 2.5782
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+3rd Qu.: 0.9500
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Max. :42.8000
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption>
+Summary Results for Commonwealth Games Search Trend
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+date
+</th>
+<th style="text-align:left;">
+hits
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Length:52
+</td>
+<td style="text-align:left;">
+Min. : 0.0000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Class :character
+</td>
+<td style="text-align:left;">
+1st Qu.: 0.0000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Mode :character
+</td>
+<td style="text-align:left;">
+Median : 0.0000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Mean : 1.7705
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+3rd Qu.: 0.1333
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Max. :47.3333
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="kable_wrapper lightable-classic" style="font-size: 14px; font-family: Cambria; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td>
+<table>
+<caption>
+Summary Results for League of Legends Search Trend with Time
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+date
+</th>
+<th style="text-align:left;">
+hits
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Length:52
+</td>
+<td style="text-align:left;">
+Min. : 2.667
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Class :character
+</td>
+<td style="text-align:left;">
+1st Qu.: 3.267
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Mode :character
+</td>
+<td style="text-align:left;">
+Median : 3.833
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Mean : 6.500
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+3rd Qu.: 4.783
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Max. :25.533
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption>
+Summary Results for League of Legends Search Trend with Time
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+date
+</th>
+<th style="text-align:left;">
+hits
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Length:52
+</td>
+<td style="text-align:left;">
+Min. : 1.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Class :character
+</td>
+<td style="text-align:left;">
+1st Qu.: 1.830
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Mode :character
+</td>
+<td style="text-align:left;">
+Median : 2.267
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Mean : 3.892
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+3rd Qu.: 3.818
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Max. :31.800
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Table 7 show the results that for most of the mean are relatively low
+because most of the high search queries occurred during the event. We
+can also see that the maximum search queries for each event is
+approximately 40% to 50% which is not really that high. Although League
+of Legends has the lowest highest hits, their mean is the highest
+compared to others. This could represent that the search trend hits
+numbers were more spread out throughout 2022.</p>
+</div>
+<div id="research-question" class="section level2">
+<h2>Research Question</h2>
+<p>Our main question was to find whether there is any trend in the
+search hit of sports events during 2022.</p>
+</div>
+<div id="analysis-with-search-hits-over-time"
+class="section level2 tabset">
+<h2 class="tabset">Analysis with Search Hits over time</h2>
+<div id="transition-over-time-graph---animation" class="section level3">
+<h3>Transition Over Time Graph - Animation</h3>
+<p><img
+src="Result_files/figure-html/unnamed-chunk-8-1.gif" /><!-- --></p>
+<p>Figure 4 above shows how the search hits transition for each sport
+events in 2022.</p>
+<hr />
+</div>
+<div id="transition-over-time-graph---interactive"
+class="section level3">
+<h3>Transition Over Time Graph - Interactive</h3>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-22c28e9738ce7bc41ed4" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-22c28e9738ce7bc41ed4">{"x":{"data":[{"x":[18994,19001,19008,19015,19022,19029,19036,19043,19050,19057,19064,19071,19078,19085,19092,19099,19106,19113,19120,19127,19134,19141,19148,19155,19162,19169,19176,19183,19190,19197,19204,19211,19218,19225,19232,19239,19246,19253,19260,19267,19274,19281,19288,19295,19302,19309,19316,19323,19330,19337,19344,19351],"y":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0666666666666667,0,0,0,0,0,0,0.133333333333333,0.133333333333333,0.133333333333333,0.266666666666667,0.333333333333333,0.4,0.533333333333333,6.8,47.3333333333333,33.8,0.933333333333333,0.4,0.266666666666667,0.133333333333333,0.133333333333333,0.133333333333333,0.133333333333333,0,0,0,0,0,0,0,0,0,0,0,0,0],"text":["Date: 2022-01-02<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-01-09<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-01-16<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-01-23<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-01-30<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-02-06<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-02-13<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-02-20<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-02-27<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-03-06<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-03-13<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-03-20<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-03-27<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-04-03<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-04-10<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-04-17<br />Hits:  0.06666667<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-04-24<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-05-01<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-05-08<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-05-15<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-05-22<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-05-29<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-06-05<br />Hits:  0.13333333<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-06-12<br />Hits:  0.13333333<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-06-19<br />Hits:  0.13333333<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-06-26<br />Hits:  0.26666667<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-07-03<br />Hits:  0.33333333<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-07-10<br />Hits:  0.40000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-07-17<br />Hits:  0.53333333<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-07-24<br />Hits:  6.80000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-07-31<br />Hits: 47.33333333<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-08-07<br />Hits: 33.80000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-08-14<br />Hits:  0.93333333<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-08-21<br />Hits:  0.40000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-08-28<br />Hits:  0.26666667<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-09-04<br />Hits:  0.13333333<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-09-11<br />Hits:  0.13333333<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-09-18<br />Hits:  0.13333333<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-09-25<br />Hits:  0.13333333<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-10-02<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-10-09<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-10-16<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-10-23<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-10-30<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-11-06<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-11-13<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-11-20<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-11-27<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-12-04<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-12-11<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-12-18<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits","Date: 2022-12-25<br />Hits:  0.00000000<br />Sport Events: Commonwealth Games Hits<br />Sport Events: Commonwealth Games Hits"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(68,1,84,1)","dash":"solid"},"hoveron":"points","name":"Commonwealth Games Hits","legendgroup":"Commonwealth Games Hits","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[18994,19001,19008,19015,19022,19029,19036,19043,19050,19057,19064,19071,19078,19085,19092,19099,19106,19113,19120,19127,19134,19141,19148,19155,19162,19169,19176,19183,19190,19197,19204,19211,19218,19225,19232,19239,19246,19253,19260,19267,19274,19281,19288,19295,19302,19309,19316,19323,19330,19337,19344,19351],"y":[1.15384615384615,1.69230769230769,1.13333333333333,1.06666666666667,1,1.38461538461538,1.81818181818182,1.75,2.07692307692308,2.13333333333333,1.30769230769231,1.92307692307692,1.69230769230769,1.75,1.83333333333333,1.76923076923077,2.07692307692308,2.06666666666667,2.38461538461538,3.73333333333333,4.06666666666667,2.26666666666667,2.26666666666667,2.15384615384615,3,2.41666666666667,2.25,2.4,2.4,2.4,2.73333333333333,6.21428571428571,4.26666666666667,3.78571428571429,4.21428571428571,4.13333333333333,6.86666666666667,4.13333333333333,3.46666666666667,5.26666666666667,15.7857142857143,31.8,18.2,11.4,2.35714285714286,2,1.92307692307692,2.15384615384615,3.91666666666667,2.61538461538462,2.16666666666667,1.61538461538462],"text":["Date: 2022-01-02<br />Hits:  1.15384615<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-01-09<br />Hits:  1.69230769<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-01-16<br />Hits:  1.13333333<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-01-23<br />Hits:  1.06666667<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-01-30<br />Hits:  1.00000000<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-02-06<br />Hits:  1.38461538<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-02-13<br />Hits:  1.81818182<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-02-20<br />Hits:  1.75000000<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-02-27<br />Hits:  2.07692308<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-03-06<br />Hits:  2.13333333<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-03-13<br />Hits:  1.30769231<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-03-20<br />Hits:  1.92307692<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-03-27<br />Hits:  1.69230769<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-04-03<br />Hits:  1.75000000<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-04-10<br />Hits:  1.83333333<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-04-17<br />Hits:  1.76923077<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-04-24<br />Hits:  2.07692308<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-05-01<br />Hits:  2.06666667<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-05-08<br />Hits:  2.38461538<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-05-15<br />Hits:  3.73333333<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-05-22<br />Hits:  4.06666667<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-05-29<br />Hits:  2.26666667<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-06-05<br />Hits:  2.26666667<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-06-12<br />Hits:  2.15384615<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-06-19<br />Hits:  3.00000000<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-06-26<br />Hits:  2.41666667<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-07-03<br />Hits:  2.25000000<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-07-10<br />Hits:  2.40000000<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-07-17<br />Hits:  2.40000000<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-07-24<br />Hits:  2.40000000<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-07-31<br />Hits:  2.73333333<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-08-07<br />Hits:  6.21428571<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-08-14<br />Hits:  4.26666667<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-08-21<br />Hits:  3.78571429<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-08-28<br />Hits:  4.21428571<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-09-04<br />Hits:  4.13333333<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-09-11<br />Hits:  6.86666667<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-09-18<br />Hits:  4.13333333<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-09-25<br />Hits:  3.46666667<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-10-02<br />Hits:  5.26666667<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-10-09<br />Hits: 15.78571429<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-10-16<br />Hits: 31.80000000<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-10-23<br />Hits: 18.20000000<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-10-30<br />Hits: 11.40000000<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-11-06<br />Hits:  2.35714286<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-11-13<br />Hits:  2.00000000<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-11-20<br />Hits:  1.92307692<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-11-27<br />Hits:  2.15384615<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-12-04<br />Hits:  3.91666667<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-12-11<br />Hits:  2.61538462<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-12-18<br />Hits:  2.16666667<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits","Date: 2022-12-25<br />Hits:  1.61538462<br />Sport Events: Dota 2 Hits<br />Sport Events: Dota 2 Hits"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(59,82,139,1)","dash":"solid"},"hoveron":"points","name":"Dota 2 Hits","legendgroup":"Dota 2 Hits","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[18994,19001,19008,19015,19022,19029,19036,19043,19050,19057,19064,19071,19078,19085,19092,19099,19106,19113,19120,19127,19134,19141,19148,19155,19162,19169,19176,19183,19190,19197,19204,19211,19218,19225,19232,19239,19246,19253,19260,19267,19274,19281,19288,19295,19302,19309,19316,19323,19330,19337,19344,19351],"y":[5.06666666666667,4.73333333333333,4.06666666666667,3.8,3.93333333333333,3.53333333333333,3.4,3.2,2.93333333333333,3.06666666666667,3,3.4,3.66666666666667,3.6,3.73333333333333,4.06666666666667,4.53333333333333,3.26666666666667,4,3.8,4.06666666666667,3.6,3.2,3.13333333333333,3.66666666666667,3.26666666666667,2.86666666666667,3.86666666666667,4.6,4.2,3.8,4.33333333333333,4.6,4.93333333333333,6.46666666666667,8.6,9.8,11.2666666666667,23.6,25.0666666666667,25.5333333333333,17.3333333333333,14.7333333333333,24.5333333333333,19.6666666666667,4.6,3.46666666666667,3.2,3.13333333333333,2.73333333333333,2.66666666666667,2.66666666666667],"text":["Date: 2022-01-02<br />Hits:  5.06666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-01-09<br />Hits:  4.73333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-01-16<br />Hits:  4.06666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-01-23<br />Hits:  3.80000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-01-30<br />Hits:  3.93333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-02-06<br />Hits:  3.53333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-02-13<br />Hits:  3.40000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-02-20<br />Hits:  3.20000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-02-27<br />Hits:  2.93333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-03-06<br />Hits:  3.06666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-03-13<br />Hits:  3.00000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-03-20<br />Hits:  3.40000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-03-27<br />Hits:  3.66666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-04-03<br />Hits:  3.60000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-04-10<br />Hits:  3.73333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-04-17<br />Hits:  4.06666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-04-24<br />Hits:  4.53333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-05-01<br />Hits:  3.26666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-05-08<br />Hits:  4.00000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-05-15<br />Hits:  3.80000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-05-22<br />Hits:  4.06666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-05-29<br />Hits:  3.60000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-06-05<br />Hits:  3.20000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-06-12<br />Hits:  3.13333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-06-19<br />Hits:  3.66666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-06-26<br />Hits:  3.26666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-07-03<br />Hits:  2.86666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-07-10<br />Hits:  3.86666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-07-17<br />Hits:  4.60000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-07-24<br />Hits:  4.20000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-07-31<br />Hits:  3.80000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-08-07<br />Hits:  4.33333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-08-14<br />Hits:  4.60000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-08-21<br />Hits:  4.93333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-08-28<br />Hits:  6.46666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-09-04<br />Hits:  8.60000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-09-11<br />Hits:  9.80000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-09-18<br />Hits: 11.26666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-09-25<br />Hits: 23.60000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-10-02<br />Hits: 25.06666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-10-09<br />Hits: 25.53333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-10-16<br />Hits: 17.33333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-10-23<br />Hits: 14.73333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-10-30<br />Hits: 24.53333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-11-06<br />Hits: 19.66666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-11-13<br />Hits:  4.60000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-11-20<br />Hits:  3.46666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-11-27<br />Hits:  3.20000000<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-12-04<br />Hits:  3.13333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-12-11<br />Hits:  2.73333333<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-12-18<br />Hits:  2.66666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits","Date: 2022-12-25<br />Hits:  2.66666667<br />Sport Events: League of Legends Hits<br />Sport Events: League of Legends Hits"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(33,144,140,1)","dash":"solid"},"hoveron":"points","name":"League of Legends Hits","legendgroup":"League of Legends Hits","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[18994,19001,19008,19015,19022,19029,19036,19043,19050,19057,19064,19071,19078,19085,19092,19099,19106,19113,19120,19127,19134,19141,19148,19155,19162,19169,19176,19183,19190,19197,19204,19211,19218,19225,19232,19239,19246,19253,19260,19267,19274,19281,19288,19295,19302,19309,19316,19323,19330,19337,19344,19351],"y":[1.73333333333333,1.8,2.2,3,23.6,42.8,23.9333333333333,6.93333333333333,1.66666666666667,1.26666666666667,1,0.666666666666667,0.666666666666667,0.666666666666667,0.466666666666667,0.6,0.6,0.466666666666667,0.466666666666667,0.533333333333333,0.4,0.4,0.533333333333333,0.466666666666667,0.466666666666667,0.4,0.466666666666667,0.4,0.6,0.933333333333333,1.53333333333333,1.33333333333333,0.6,0.533333333333333,0.533333333333333,0.6,0.6,0.6,0.533333333333333,0.4,0.733333333333333,0.4,0.4,0.4,0.533333333333333,0.533333333333333,0.666666666666667,0.733333333333333,0.666666666666667,0.533333333333333,0.6,0.466666666666667],"text":["Date: 2022-01-02<br />Hits:  1.73333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-01-09<br />Hits:  1.80000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-01-16<br />Hits:  2.20000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-01-23<br />Hits:  3.00000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-01-30<br />Hits: 23.60000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-02-06<br />Hits: 42.80000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-02-13<br />Hits: 23.93333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-02-20<br />Hits:  6.93333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-02-27<br />Hits:  1.66666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-03-06<br />Hits:  1.26666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-03-13<br />Hits:  1.00000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-03-20<br />Hits:  0.66666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-03-27<br />Hits:  0.66666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-04-03<br />Hits:  0.66666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-04-10<br />Hits:  0.46666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-04-17<br />Hits:  0.60000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-04-24<br />Hits:  0.60000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-05-01<br />Hits:  0.46666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-05-08<br />Hits:  0.46666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-05-15<br />Hits:  0.53333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-05-22<br />Hits:  0.40000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-05-29<br />Hits:  0.40000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-06-05<br />Hits:  0.53333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-06-12<br />Hits:  0.46666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-06-19<br />Hits:  0.46666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-06-26<br />Hits:  0.40000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-07-03<br />Hits:  0.46666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-07-10<br />Hits:  0.40000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-07-17<br />Hits:  0.60000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-07-24<br />Hits:  0.93333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-07-31<br />Hits:  1.53333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-08-07<br />Hits:  1.33333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-08-14<br />Hits:  0.60000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-08-21<br />Hits:  0.53333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-08-28<br />Hits:  0.53333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-09-04<br />Hits:  0.60000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-09-11<br />Hits:  0.60000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-09-18<br />Hits:  0.60000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-09-25<br />Hits:  0.53333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-10-02<br />Hits:  0.40000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-10-09<br />Hits:  0.73333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-10-16<br />Hits:  0.40000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-10-23<br />Hits:  0.40000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-10-30<br />Hits:  0.40000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-11-06<br />Hits:  0.53333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-11-13<br />Hits:  0.53333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-11-20<br />Hits:  0.66666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-11-27<br />Hits:  0.73333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-12-04<br />Hits:  0.66666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-12-11<br />Hits:  0.53333333<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-12-18<br />Hits:  0.60000000<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits","Date: 2022-12-25<br />Hits:  0.46666667<br />Sport Events: Olympic Games Hits<br />Sport Events: Olympic Games Hits"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(93,200,99,1)","dash":"solid"},"hoveron":"points","name":"Olympic Games Hits","legendgroup":"Olympic Games Hits","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[18994,19001,19008,19015,19022,19029,19036,19043,19050,19057,19064,19071,19078,19085,19092,19099,19106,19113,19120,19127,19134,19141,19148,19155,19162,19169,19176,19183,19190,19197,19204,19211,19218,19225,19232,19239,19246,19253,19260,19267,19274,19281,19288,19295,19302,19309,19316,19323,19330,19337,19344,19351],"y":[0.4,0.466666666666667,0.733333333333333,0.933333333333333,1.6,0.666666666666667,0.333333333333333,0.333333333333333,0.466666666666667,0.733333333333333,0.733333333333333,1.46666666666667,2.2,0.866666666666667,0.333333333333333,0.333333333333333,0.333333333333333,0.4,0.4,0.333333333333333,0.466666666666667,0.666666666666667,0.866666666666667,0.866666666666667,0.466666666666667,0.333333333333333,0.4,0.4,0.466666666666667,0.4,0.4,0.4,0.466666666666667,0.466666666666667,0.733333333333333,0.8,1,1.26666666666667,1.46666666666667,1.26666666666667,1.33333333333333,3.46666666666667,6.6,10.5333333333333,8.66666666666667,6.26666666666667,47.4666666666667,49.8,38.6,20.1333333333333,14.3333333333333,1.46666666666667],"text":["Date: 2022-01-02<br />Hits:  0.40000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-01-09<br />Hits:  0.46666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-01-16<br />Hits:  0.73333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-01-23<br />Hits:  0.93333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-01-30<br />Hits:  1.60000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-02-06<br />Hits:  0.66666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-02-13<br />Hits:  0.33333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-02-20<br />Hits:  0.33333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-02-27<br />Hits:  0.46666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-03-06<br />Hits:  0.73333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-03-13<br />Hits:  0.73333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-03-20<br />Hits:  1.46666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-03-27<br />Hits:  2.20000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-04-03<br />Hits:  0.86666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-04-10<br />Hits:  0.33333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-04-17<br />Hits:  0.33333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-04-24<br />Hits:  0.33333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-05-01<br />Hits:  0.40000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-05-08<br />Hits:  0.40000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-05-15<br />Hits:  0.33333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-05-22<br />Hits:  0.46666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-05-29<br />Hits:  0.66666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-06-05<br />Hits:  0.86666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-06-12<br />Hits:  0.86666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-06-19<br />Hits:  0.46666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-06-26<br />Hits:  0.33333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-07-03<br />Hits:  0.40000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-07-10<br />Hits:  0.40000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-07-17<br />Hits:  0.46666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-07-24<br />Hits:  0.40000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-07-31<br />Hits:  0.40000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-08-07<br />Hits:  0.40000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-08-14<br />Hits:  0.46666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-08-21<br />Hits:  0.46666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-08-28<br />Hits:  0.73333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-09-04<br />Hits:  0.80000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-09-11<br />Hits:  1.00000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-09-18<br />Hits:  1.26666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-09-25<br />Hits:  1.46666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-10-02<br />Hits:  1.26666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-10-09<br />Hits:  1.33333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-10-16<br />Hits:  3.46666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-10-23<br />Hits:  6.60000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-10-30<br />Hits: 10.53333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-11-06<br />Hits:  8.66666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-11-13<br />Hits:  6.26666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-11-20<br />Hits: 47.46666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-11-27<br />Hits: 49.80000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-12-04<br />Hits: 38.60000000<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-12-11<br />Hits: 20.13333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-12-18<br />Hits: 14.33333333<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits","Date: 2022-12-25<br />Hits:  1.46666667<br />Sport Events: World Cup Hits<br />Sport Events: World Cup Hits"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(253,231,37,1)","dash":"solid"},"hoveron":"points","name":"World Cup Hits","legendgroup":"World Cup Hits","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Figure 5: Interactive Search Hits in 2022 with all Sport Events","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[18976.15,19368.85],"tickmode":"array","ticktext":["Jan 2022","Apr 2022","Jul 2022","Oct 2022","Jan 2023"],"tickvals":[18993,19083,19174,19266,19358],"categoryorder":"array","categoryarray":["Jan 2022","Apr 2022","Jul 2022","Oct 2022","Jan 2023"],"nticks":null,"ticks":"outside","tickcolor":"rgba(179,179,179,1)","ticklen":3.65296803652968,"tickwidth":0.33208800332088,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(222,222,222,1)","gridwidth":0.33208800332088,"zeroline":false,"anchor":"y","title":{"text":"Date","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-2.49,52.29],"tickmode":"array","ticktext":["0","10","20","30","40","50"],"tickvals":[0,10,20,30,40,50],"categoryorder":"array","categoryarray":["0","10","20","30","40","50"],"nticks":null,"ticks":"outside","tickcolor":"rgba(179,179,179,1)","ticklen":3.65296803652968,"tickwidth":0.33208800332088,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(222,222,222,1)","gridwidth":0.33208800332088,"zeroline":false,"anchor":"x","title":{"text":"Search Hits Trends","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(179,179,179,1)","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"Sport Events","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"940d1c09819a":{"x":{},"y":{},"colour":{},"type":"scatter"}},"cur_data":"940d1c09819a","visdat":{"940d1c09819a":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>Figure 5 above shows the different search hits in weekly with the
+date as the start of the week and the number represents the search hits
+for that event. Each line represents different sports event and we can
+choose only certain events if we would want to compare a particular set
+of sport events.</p>
+<p>We can see that most events have a higher peak when the event is
+on-going. However, for the World Cup, we can see the search trend did
+not go down significantly compared to others and there are higher search
+trends before the events start compared to other events. For both
+Commonwealth Games and Olympic games, the search trend went down
+extremely fast after the event had concluded. For both the esports (Dota
+2 and League of Legends), we can see there are still some slightly
+search queries being requested throughout the year.</p>
+<hr />
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

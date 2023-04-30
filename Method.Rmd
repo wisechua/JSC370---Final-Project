@@ -1,0 +1,349 @@
+---
+title: "Methods"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(gtrendsR)
+library(knitr)
+library(kableExtra)
+library(gganimate)
+library(viridis)
+library(plotly)
+```
+
+## Data Collection
+
+The data for this research project is acquired through the gtrends function from the gtrendsR package in R. This function can find the number of a keyword proportion to all searches on all topics at the same time. It can also provide the proportion of the searches on each keyword with each country and cities over the specified time period. It will also provide similar keywords to the searched keywords for number of hits. Due to the limitation of the function, it can at most take in 5 keywords each time which means it will generate a different data set. Hence, several keywords will need to be formed with different function calls and we will need to store them as different variables. For each event, we will use 5 keywords that can represent the sport event and use the other top 10 related queries from the results of the keywords.
+
+Since we are comparing over 5 different major sports events, the data set will be combined together after extracting the information from the results of the function call. As our main research question is comparing these sports events within 2022, we will limit our searches to only search queries data that occurred in 2022. We will generate with date restrictions to our search trends for the whole 2022 year (2022-01-01 to 2022-12-31). Note that in each result of the function call, it will have 4 data frames in total where each of them are search hit over time, country, city and major designated market area (DMA) worldwide.
+
+Note that since Google trends does not store information for locations that have extremely low search hits, the results from each enquiry of Gtrends package may not always contain the same countries, cities, and major designated market areas in each query to Google trends.
+
+The table below shows the keywords that we used for each sport events. It has the initial 5 keywords that we started with and the remaining 10 keywords based on the related queries.
+```{r, warning=FALSE, echo=FALSE, include=TRUE}
+`2022 Qatar World Cup 5 Search Keywords` <- c("world cup 2022", "world cup", "2022 world cup", "qatar world cup", "fifa world cup")
+`2022 Qatar World Cup 10 Related Search Words` <- c("fifa", "fifa world cup 2022", "fifa 2022", "2022 world cup schedule", "qatar 2022 world cup")
+`2022 Qatar World Cup 10 Related Search Words1` <- c("world cup 2022 fixtures", "world cup football 2022", "world cup 2022 live", "world cup live", "world cup table 2022")
+
+`2022 Beijing Olympic Games 5 Search Keywords` <- c("2022 winter olympic", "olympic games beijing 2022", "olympic games 2022", "beijing olympics 2022", "winter olympic games")
+`2022 Beijing Olympic Games 10 Related Search Words` <- c("olympics 2022", "olympics", "winter games 2022", "winter olympics", "olympic games")
+
+`2022 Beijing Olympic Games 10 Related Search Words1` <- c("2022 winter olympic games", "winter olympic games 2022", "olympic medals 2022", "winter olympic medal 2022", "beijing 2022")
+
+`2022 Birmingham Commonwealth Games 5 Search Keywords` <- c("2022 birmingham commonwealth games", "2022 birmingham commonwealth", "commonwealth games", "commonwealth games 2022", "2022 commonwealth games")
+`2022 Birmingham Commonwealth Games 10 Related Search Words` <- c("birmingham commonwealth games 2022", "birmingham games", "birmingham games 2022", "commonwealth games 2022 india", "commonwealth games 2022 table")
+`2022 Birmingham Commonwealth Games 10 Related Search Words1` <- c("birmingham 2022 commonwealth games india", "commonwealth games medal tally 2022", "commonwealth games medal tally", "commonwealth games medal table", "commonwealth games 2022 medals")
+
+`2022 League of Legend World Championship 5 Search Keywords` <- c("2022 league of legends world championship", "2022 league of legends", "2022 lol world championship", "2022 lol worlds", "lol worlds championship")
+`2022 League of Legend World Championship 10 Related Search Words` <- c("league of legends worlds", "league of legends worlds 2022", "worlds 2022", "lol world championship 2022", "league of legends world championship 2022 tickets")
+`2022 League of Legend World Championship 10 Related Search Words1` <- c("league of legends champions", "league of legends world championship prize pool", "league of legends world championship 2022 prize pool", "league of legends world championship 2022 schedule", "worlds league of legends")
+
+`2022 The International Dota 2 5 Search Keywords` <- c("the international dota 2 championship", "2022 the international dota 2 championship", "dota 2 championship", "the international dota 2", "dota the international 2022")
+`2022 The International Dota 2 10 Related Search Words` <- c("dota 2 world championship", "dota 2 championship 2022", "dota 2 world championship 2022", "dota 2 championship prize", "the international 2022 dota 2")
+`2022 The International Dota 2 10 Related Search Words1` <- c("dota 2 international 2022", "the international 2022", "international dota 2 2022", "dota 2 liquipedia", "the international dota 2 championship")
+
+df <- rbind(`2022 Qatar World Cup 5 Search Keywords`, `2022 Qatar World Cup 10 Related Search Words`, `2022 Qatar World Cup 10 Related Search Words1`, `2022 Beijing Olympic Games 5 Search Keywords`, `2022 Beijing Olympic Games 10 Related Search Words`, `2022 Beijing Olympic Games 10 Related Search Words1`, `2022 Birmingham Commonwealth Games 5 Search Keywords`, `2022 Birmingham Commonwealth Games 10 Related Search Words`, `2022 Birmingham Commonwealth Games 10 Related Search Words1`, `2022 League of Legend World Championship 5 Search Keywords`, `2022 League of Legend World Championship 10 Related Search Words`, `2022 League of Legend World Championship 10 Related Search Words1`, `2022 The International Dota 2 5 Search Keywords`, `2022 The International Dota 2 10 Related Search Words`, `2022 The International Dota 2 10 Related Search Words1`)
+```
+
+
+```{r, warning=FALSE, echo=FALSE, include=TRUE}
+rownames(df) <- c("2022 Qatar World Cup 5 Search Keywords", "2022 Qatar World Cup 10 Related Search Words", "", "2022 Beijing Olympic Games 5 Search Keywords", "2022 Beijing Olympic Games 10 Related Search Words", "", "2022 Birmingham Commonwealth Games 5 Search Keywords", "2022 Birmingham Commonwealth Games 10 Related Search Words", "", "2022 League of Legend World Championship 5 Search Keywords", "2022 League of Legend World Championship 10 Related Search Words", "", "2022 The International Dota 2 5 Search Keywords", "2022 The International Dota 2 10 Related Search Words", "")
+```
+
+<br>
+<div class="vscroll">
+```{r, warning=FALSE, echo=FALSE}
+kable(df, caption = "Table 1: Keywords to Search on Google Trends for Each Sports Events") %>% kable_classic(full_width = TRUE, html_font = "Cambria", font_size=14)
+```
+</div>
+<br>
+
+From table 1 above, we can see that the related words are often different keywords that people will search for that specific event. For example, people will search "fifa 2022" instead of "world cup" as some people used the organization that is holding this event. Similarly, people will search for "winter games 2022" instead of olympics as these are words that leads people to think of that event. For sport events, people are curious on the rank of the leading in each sport, but in the esports activity, other noticing keywords that appears in each event was the prize pool for the esports championship games. 
+
+
+## Data Wrangling
+
+The data cleaning for each sport event will be relatively similar because the generated results have fixed columns and information inside are the same.We will first extract the `interest over time` dataframe from each queries and combine them into a single dataframe. Afterwards, we will be changing the date columns from character values into Date by using `as.Date` in R. Next, we will place all values in the hits column (which indicate the proportion of search on the topic compared to all samples of all searches) that has `<1` into 0. This is to have all values that has less than 1% of search in the week to be considered as 0 as these are too small. Finally, we will group the data by their dates and use the summarise function to compute the mean of hits in each week with missing values removed.
+
+For the remaining 3 data frames where there are categories by country, city, and major DMA worldwide, the numbers of hits column in these data frames is not separated by weeks, as they are the highest score that occurred during the search period (2022-01-01 to 2022-12-31). We will group them by either their country, city and major DMA depending on the data frame and compute the average of hits. We will handle the same as previous for hits that have `<1` and remove NA values. 
+
+Notice that when using the gtrends function call, sometimes the type for the number of hits are not in integer and stored as character type. Hence, we will need to convert it to integer before merging the data from each function call.
+
+Finally, we will sort the remaining 3 data frames by the highest search queries in their region for better demonstration of the data frame.
+
+Below are the first six rows after data cleaning for each sports of the remaining 3 data frames:
+
+```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE, message=FALSE}
+world_cup_interest_over_time_summary <- read.csv("data/world_cup_interest_over_time_summary.csv")
+world_cup_interest_by_country <- read.csv("data/world_cup_interest_by_country.csv")
+world_cup_interest_by_dma <- read.csv("data/world_cup_interest_by_dma.csv")
+world_cup_interest_by_city <- read.csv("data/world_cup_interest_by_city.csv")
+```
+
+<br>
+<div class="vscroll">
+```{r, warning=FALSE, echo=FALSE}
+kables(
+  list(
+    kable(head(world_cup_interest_by_city)) ,
+    kable(head(world_cup_interest_by_country)) ,
+    kable(head(world_cup_interest_by_dma))
+  ),
+  caption = 'Table 2: First six rows of the World Cup Data by City, Country and Designated Market Area (DMA)'
+)%>% kable_classic(full_width = TRUE, html_font = "Cambria", font_size=14)
+```
+</div>
+<br>
+
+From table 2, it is showing the top 6 location of search hits in different location categories on world cup. We can see that cities that are appearing in the top 6 are locations that has extremely low population except Lusail which is one of the city that is in the hosting country. In the countries categories, most of them are relatively small countries and the hosting country does have an extremely high search hits. For designated market area, we can see the high search hits are location that had high population rate in the city and it an important city for the United States.
+
+```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
+olympic_games_interest_over_time_summary <- read.csv("data/olympic_games_interest_over_time_summary.csv")
+olympic_games_interest_by_country <- read.csv("data/olympic_games_interest_by_country.csv")
+olympic_games_interest_by_dma <- read.csv("data/olympic_games_interest_by_dma.csv")
+olympic_games_interest_by_city <- read.csv("data/olympic_games_interest_by_city.csv")
+```
+
+<br>
+<div class="vscroll">
+```{r, warning=FALSE, echo=FALSE}
+kables(
+  list(
+    kable(head(olympic_games_interest_by_city)),
+    kable(head(olympic_games_interest_by_country)),
+    kable(head(olympic_games_interest_by_dma))
+  ),
+  caption = 'Table 3: First six rows of the Olympic Games Data by City, Country and Designated Market Area'
+) %>% kable_classic(full_width = TRUE, html_font = "Cambria", font_size=14)
+```
+</div>
+<br>
+
+From table 3 above, we can see that it follows a similar trend that the location where the event was held has a 100 search hits, however, due to google access limitations in China, the countries search hit is to be lower than Mongolia. Notice that Canada has a similar search hits result as China which is reasonable as Winter Olympics is one of the international events that Canada usually does well. From the DMA location, it seems that the top scores are locations in United states that have low population and it does not follows the pattern with previous table.
+
+
+```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
+commonwealth_games_interest_over_time_summary <- read.csv("data/commonwealth_games_interest_over_time_summary.csv")
+commonwealth_games_interest_by_country <- read.csv("data/commonwealth_games_interest_by_country.csv")
+commonwealth_games_interest_by_dma <- read.csv("data/commonwealth_games_interest_by_dma.csv")
+commonwealth_games_interest_by_city <- read.csv("data/commonwealth_games_interest_by_city.csv")
+
+```
+
+<br>
+<div class="vscroll">
+```{r, warning=FALSE, echo=FALSE}
+kables(
+  list(
+    kable(head(commonwealth_games_interest_by_city)),
+    kable(head(commonwealth_games_interest_by_country)),
+    kable(head(commonwealth_games_interest_by_dma))
+  ),
+  caption = 'Table 4: First six rows of the Commonwealth Games Data by City, Country and Designated Market Area.'
+) %>% kable_classic(full_width = TRUE, html_font = "Cambria", font_size=14)
+```
+</div>
+<br>
+
+From table 4, we can see that the cities that have the top six are locations that are small town all around the world. The countries that have the top search hits produce a different results comparing to previous as most of the countries here are big countries that are well known. Although the event was held in Brimingham, United Kingom, the search hits was only 40.6. For the DMA locations, we can see that some location are big cities in United States which follows a similar trend to previous result.
+
+```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
+lol_games_interest_over_time_summary <- read.csv("data/lol_games_interest_over_time_summaryy.csv")
+lol_games_interest_by_country <- read.csv("data/lol_games_interest_by_country.csv")
+lol_games_interest_by_dma <- read.csv("data/lol_games_interest_by_dma.csv")
+lol_games_interest_by_city <- read.csv("data/lol_games_interest_by_city.csv")
+```
+
+<br>
+<div class="vscroll">
+```{r, warning=FALSE, echo=FALSE}
+kables(
+  list(
+    kable(head(lol_games_interest_by_city)),
+    kable(head(lol_games_interest_by_country)),
+    kable(head(lol_games_interest_by_dma))
+  ),
+  caption = 'Table 5: First six rows of the League of Legends Games Data by City, Country and Designated Market Area.'
+) %>% kable_classic(full_width = TRUE, html_font = "Cambria", font_size=14)
+```
+</div>
+<br>
+
+From table 5, cities that are having high search hits are mostly United states cities where there is a famous college. This could due to League of Legends is highly popular between students as this is a video game. From the countries, it is relatively different as most countries are in Europe and the championship events were actually hold in United States. From the DMA section, the locations seems to varies between big cities and small cities. It also shows a similar result with League of Legend games but not with other sports event.
+
+
+```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
+dota_games_interest_over_time_summary <- read.csv("data/dota_games_interest_over_time_summary.csv")
+dota_games_interest_by_country <- read.csv("data/dota_games_interest_by_country.csv")
+dota_games_interest_by_dma <- read.csv("data/dota_games_interest_by_dma.csv")
+dota_games_interest_by_city <- read.csv("data/dota_games_interest_by_city.csv")
+```
+
+<br>
+<div class="vscroll">
+```{r, warning=FALSE, echo=FALSE,}
+kables(
+  list(
+    kable(head(dota_games_interest_by_city)),
+    kable(head(dota_games_interest_by_country)),
+    kable(head(dota_games_interest_by_dma))
+  ),
+  caption = 'Table 6: First six rows of the Dota Games Data by City, Country and Designated Market Area.'
+) %>% kable_classic(full_width = TRUE, html_font = "Cambria", font_size=14)
+```
+</div>
+<br>
+
+From table 6, the top cities that has the highest search hits are all small cities, which comparing to previous table, it shows differently. For the countries, it is countries that has a relatively low population and the location where Dota 2 championship were held was not in it. For DMA, most area were big cities in United States with a very high population comparing to other cities in
+
+## Data Merging 
+We will merge all cities data with different sport events into one data by their city with using full join since the number of cities in each data could be different. We will also do this to the countries data and designated market area data. With merging all 5 sports into 1 data frame, we will need to rename the columns to the games name.
+
+```{r, warning=FALSE, echo=FALSE}
+interest_by_city_list <- list(world_cup_interest_by_city, olympic_games_interest_by_city, commonwealth_games_interest_by_city, lol_games_interest_by_city, dota_games_interest_by_city)
+interest_by_city_combine <- interest_by_city_list %>% reduce(full_join, by='City')
+interest_by_city_combine <- data.frame(interest_by_city_combine)
+interest_by_city_combine$Hits.x[is.nan(interest_by_city_combine$Hits.x)]<-NA
+interest_by_city_combine$Hits.y[is.nan(interest_by_city_combine$Hits.y)]<-NA
+interest_by_city_combine$Hits.x.x[is.nan(interest_by_city_combine$Hits.x.x)]<-NA
+interest_by_city_combine$Hits.y.y[is.nan(interest_by_city_combine$Hits.y.y)]<-NA
+interest_by_city_combine$Hits[is.nan(interest_by_city_combine$Hits)]<-NA
+interest_by_city_combine <- filter(interest_by_city_combine,rowSums(is.na(interest_by_city_combine)) != ncol(interest_by_city_combine) - 1)
+colnames(interest_by_city_combine) <- c("City", "World Cup Hits", "Olympic Games Hits", "Commonwealth Games Hits", "League of Legends Hits", "Dota 2 Hits")
+```
+
+```{r, warning=FALSE, echo=FALSE}
+interest_by_country_list <- list(world_cup_interest_by_country, olympic_games_interest_by_country, commonwealth_games_interest_by_country, lol_games_interest_by_country, dota_games_interest_by_country)
+interest_by_country_combine <- interest_by_country_list %>% reduce(full_join, by='Countries')
+interest_by_country_combine <- data.frame(interest_by_country_combine)
+interest_by_country_combine$Hits.x[is.nan(interest_by_country_combine$Hits.x)] <- NA
+interest_by_country_combine$Hits.y[is.nan(interest_by_country_combine$Hits.y)] <- NA
+interest_by_country_combine$Hits.x.x[is.nan(interest_by_country_combine$Hits.x.x)] <- NA
+interest_by_country_combine$Hits.y.y[is.nan(interest_by_country_combine$Hits.y.y)] <- NA
+interest_by_country_combine$Hits[is.nan(interest_by_country_combine$Hits)] <- NA
+interest_by_country_combine <- filter(interest_by_country_combine,rowSums(is.na(interest_by_country_combine)) != ncol(interest_by_country_combine) - 1)
+colnames(interest_by_country_combine) <- c("Country", "World Cup Hits", "Olympic Games Hits", "Commonwealth Games Hits", "League of Legends Hits", "Dota 2 Hits")
+```
+
+```{r, warning=FALSE, echo=FALSE}
+interest_by_dma_list <- list(world_cup_interest_by_dma, olympic_games_interest_by_dma, commonwealth_games_interest_by_dma, lol_games_interest_by_dma, dota_games_interest_by_dma)
+interest_by_dma_combine <- interest_by_dma_list %>% reduce(full_join, by='DMA')
+interest_by_dma_combine <- data.frame(interest_by_dma_combine)
+interest_by_dma_combine$Hits.x[is.nan(interest_by_dma_combine$Hits.x)] <- NA
+interest_by_dma_combine$Hits.y[is.nan(interest_by_dma_combine$Hits.y)] <- NA
+interest_by_dma_combine$Hits.x.x[is.nan(interest_by_dma_combine$Hits.x.x)] <- NA
+interest_by_dma_combine$Hits.y.y[is.nan(interest_by_dma_combine$Hits.y.y)] <- NA
+interest_by_dma_combine$Hits[is.nan(interest_by_dma_combine$Hits)] <- NA
+interest_by_dma_combine <- filter(interest_by_dma_combine,rowSums(is.na(interest_by_dma_combine)) != ncol(interest_by_dma_combine) - 1)
+colnames(interest_by_dma_combine) <- c("Designated Market Area", "World Cup Hits", "Olympic Games Hits", "Commonwealth Games Hits", "League of Legends Hits", "Dota 2 Hits")
+```
+
+## Data Exploration {.tabset}
+For data exploration, we will use barchart graph to see how the general trends goes in each sport events and compare between different sports events by different city, country and designated market area. We will only choose locations that have all 5 data.
+
+### City
+<div>
+  <p class="gplot">
+```{r, warning=FALSE, echo=FALSE, width=17}
+interest_by_city_combine_1 <- filter(interest_by_city_combine,rowSums(is.na(interest_by_city_combine)) <= ncol(interest_by_city_combine) - 3)
+interest_by_city_combine_1[is.na(interest_by_city_combine_1)] <- 0
+barplot_5 <- interest_by_city_combine_1 %>%
+  pivot_longer(names_to = "Games", values_to = "Hits", cols = c(2:6)) %>%
+  ggplot(mapping = aes(x = fct_infreq(City, Hits), y= Hits, fill = Games)) +
+  geom_bar(stat = "identity") +
+  scale_fill_brewer(palette = "Set3") +
+  labs(
+    x = "City", y = "Hits", fill = "Sport Events",
+    title = "Figure 1: Cities that has at least 3 values of hits in the 5 sport events"
+    ) +
+  coord_flip() +
+  scale_x_discrete(limits=rev)
+barplot_5 <- ggplotly(barplot_5)
+for (i in 1:length(barplot_5$x$data)) {
+  barplot_5$x$data[[i]]$base <- c()
+}
+barplot_5$height = 450
+barplot_5$width = 800
+barplot_5
+```
+  </p>
+</div>
+
+Figure 1 is the barplot shows cities that have at least 2 search hits in the 5 sport events. I limited to at least 2 because most of the cities have either only have 1 search hits. We can see that most of the cities from the bar plot are considered as one of the major city in the province. We can see that World Cup and Olympic Games has very high search trends as it appears in all cities but commonwealth games does not. A very surprising result was League of Legend where it appears in most of the cities. By filtering the events, we can compares the search hits for an isolated event. As the default is showing cities that has two results in the sport hits, there are other cities that are not shown.
+
+---
+
+### Country
+<div>
+  <p class="gplot">
+```{r echo=FALSE, warning=FALSE}
+interest_by_country_combine_1 <- filter(interest_by_country_combine,rowSums(is.na(interest_by_country_combine)) == ncol(interest_by_country_combine) - 6)
+barplot_1 <-interest_by_country_combine_1 %>%
+  pivot_longer(names_to = "Games", values_to = "Hits", cols = c(2:6)) %>%
+  ggplot(mapping = aes(x = fct_infreq(Country, Hits), y = Hits, fill = Games)) +
+  geom_bar(stat = "identity") +
+  scale_fill_brewer(palette = "Set3") +
+  labs(
+    x = "Country", y = "Hits", fill = "Sport Events",
+    title = "Figure 2: Countries that has all 5 sport events of search hits"
+    ) +
+  coord_flip() +
+  scale_x_discrete(limits=rev)
+barplot_1 <- ggplotly(barplot_1)
+for (i in 1:length(barplot_1$x$data)) {
+  barplot_1$x$data[[i]]$base <- c()
+}
+barplot_1$height = 450
+barplot_1$width = 800
+barplot_1
+```
+  </p>
+</div>
+
+Figure 2 is barplot that only shows countries that have all 5 sport events and search queries. From the country search trend, we can see most of the countries have at least some search trend in the World Cup event. Some countries have relatively low search in Olympic games. For League of Legends, we can see most of the countries have very high search hits compared to Dota 2. We can filter out some events and only comparing between 1 to 4 events instead of 5. It shows the sums of search hits in total for the sport events which also can determine whether there are some countries that have extremely high search hits in all different sport games. For the Commonwealth Games, it seems that some countries have more searches in the Commonwealth compared to the Olympics but would need further investigation.
+
+---
+
+### Designated Market Area
+<div>
+  <p class="gplot">
+```{r, warning=FALSE, echo=FALSE, warning=FALSE}
+interest_by_dma_combine_1 <- filter(interest_by_dma_combine,rowSums(is.na(interest_by_dma_combine)) == ncol(interest_by_dma_combine) - 6)
+
+interest_by_dma_combine_1 <- interest_by_dma_combine_1 %>% pivot_longer(names_to = "Games", values_to = "Hits", cols = c(2:6)) %>%
+  group_by(`Designated Market Area`) %>% mutate(Hits = Hits, Games = Games, total_Hits = sum(Hits)) %>% arrange(desc(total_Hits))
+interest_by_dma_combine_1 <- data.frame(interest_by_dma_combine_1) %>%
+  slice_head(n = 50)
+
+barplot_2 <- interest_by_dma_combine_1 %>%
+  ggplot(mapping = aes(x = fct_infreq(`Designated.Market.Area`, Hits), y= Hits, fill = Games)) +
+  geom_bar(stat = "identity") +
+  scale_fill_brewer(palette = "Set3") +
+  labs(,
+    x = "Designated Market Area", y = "Hits", fill = "Games",
+    title = "Figure 3: Designated Market Area that has \nall 5 sport events of search hits"
+    ) +
+  coord_flip() +
+  scale_x_discrete(limits=rev)
+barplot_2 <- ggplotly(barplot_2)
+for (i in 1:length(barplot_2$x$data)) {
+  barplot_2$x$data[[i]]$base <- c()
+}
+barplot_2$height = 450
+barplot_2$width = 800
+barplot_2
+```
+  </p>
+</div>
+Figure 3 is a barplot that shows the search hits for designated market area with all 5 sports events. It can produce a comparison between area whether the search trends are similar and whether there is an event is more outstanding in some areas. Also, it can tell which area have the highest search trends among all events. However, from the search trend plot above, we can see most events have a relatively consistent search hits among all different games. One of the most surprising results was that Dota 2 hits were relatively higher than League of Legends but this trend was not found in previous barplot.
+
+---

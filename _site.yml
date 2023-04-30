@@ -1,16 +1,17 @@
-name: "my-website"
+name: "JSC370_Final_Project"
 output_dir: "."
 navbar:
-  title: "Search Trends in 2022 on Sports Event"
+  title: "JSC370 Final Project"
   left:
-    - text: "Search Hits by Map"
+    - text: "Home"
       href: index.html
-    - text: "Search Hits by Location"
-      href: second_tab.html
-    - text: "Midterm Project"
-      href: Midterm_Project.html
+    - text: "Methods"
+      href: Method.html
+    - text: "Results"
+      href: Result.html
+    - text: "Conclusions"
+      href: Conclusion.html
 output:
   html_document:
     theme: cosmo
-    highlight: textmate
     css: styles.css

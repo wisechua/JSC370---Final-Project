@@ -1,0 +1,125 @@
+---
+title: "Results"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(gtrendsR)
+library(knitr)
+library(kableExtra)
+library(gganimate)
+library(viridis)
+library(plotly)
+```
+
+```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE, message=FALSE}
+world_cup_interest_over_time_summary <- read.csv("data/world_cup_interest_over_time_summary.csv")
+world_cup_interest_by_country <- read.csv("data/world_cup_interest_by_country.csv")
+world_cup_interest_by_dma <- read.csv("data/world_cup_interest_by_dma.csv")
+world_cup_interest_by_city <- read.csv("data/world_cup_interest_by_city.csv")
+```
+
+```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
+olympic_games_interest_over_time_summary <- read.csv("data/olympic_games_interest_over_time_summary.csv")
+olympic_games_interest_by_country <- read.csv("data/olympic_games_interest_by_country.csv")
+olympic_games_interest_by_dma <- read.csv("data/olympic_games_interest_by_dma.csv")
+olympic_games_interest_by_city <- read.csv("data/olympic_games_interest_by_city.csv")
+```
+
+```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
+commonwealth_games_interest_over_time_summary <- read.csv("data/commonwealth_games_interest_over_time_summary.csv")
+commonwealth_games_interest_by_country <- read.csv("data/commonwealth_games_interest_by_country.csv")
+commonwealth_games_interest_by_dma <- read.csv("data/commonwealth_games_interest_by_dma.csv")
+commonwealth_games_interest_by_city <- read.csv("data/commonwealth_games_interest_by_city.csv")
+```
+
+```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
+lol_games_interest_over_time_summary <- read.csv("data/lol_games_interest_over_time_summaryy.csv")
+lol_games_interest_by_country <- read.csv("data/lol_games_interest_by_country.csv")
+lol_games_interest_by_dma <- read.csv("data/lol_games_interest_by_dma.csv")
+lol_games_interest_by_city <- read.csv("data/lol_games_interest_by_city.csv")
+```
+
+```{r, warning=FALSE, echo=FALSE, include=TRUE, eval=TRUE}
+dota_games_interest_over_time_summary <- read.csv("data/dota_games_interest_over_time_summary.csv")
+dota_games_interest_by_country <- read.csv("data/dota_games_interest_by_country.csv")
+dota_games_interest_by_dma <- read.csv("data/dota_games_interest_by_dma.csv")
+dota_games_interest_by_city <- read.csv("data/dota_games_interest_by_city.csv")
+```
+
+## Preliminary Results
+
+Below are the summary results for the search trends for each sports event from 2022/01/01 to 2022/12/31 worldwide. 
+
+```{r, warning=FALSE, echo=FALSE}
+
+kables(list(
+  kable(summary(world_cup_interest_over_time_summary, align = "c"), caption = "Summary Results for World Cup Search Trend") ,
+  kable(summary(olympic_games_interest_over_time_summary, align = "c"), caption = "Summary Results for Olympic Games Search Trend"),
+  kable(summary(commonwealth_games_interest_over_time_summary, align = "c"), caption = "Summary Results for Commonwealth Games Search Trend")), caption = "Table 7: Summary Results for All Sport Events Search Trend with Time") %>% kable_classic( html_font = "Cambria", font_size=14)
+kables(list(
+  kable(summary(lol_games_interest_over_time_summary, align = "c"), caption = " Summary Results for League of Legends Search Trend with Time"),
+  kable(summary(dota_games_interest_over_time_summary, align = "c"), caption = " Summary Results for League of Legends Search Trend with Time")
+  ))%>% kable_classic( html_font = "Cambria", font_size=14,)
+```
+
+Table 7 show the results that for most of the mean are relatively low because most of the high search queries occurred during the event. We can also see that the maximum search queries for each event is approximately 40% to 50% which is not really that high. Although League of Legends has the lowest highest hits, their mean is the highest compared to others. This could represent that the search trend hits numbers were more spread out throughout 2022.
+
+## Research Question
+Our main question was to find whether there is any trend in the search hit of sports events during 2022.
+
+```{r, warning = FALSE, echo=FALSE, message=FALSE}
+interest_over_time_list <- list(world_cup_interest_over_time_summary, olympic_games_interest_over_time_summary, commonwealth_games_interest_over_time_summary, lol_games_interest_over_time_summary, dota_games_interest_over_time_summary)
+interest_over_time_combine <- interest_over_time_list %>% reduce(full_join, by='date')
+interest_over_time_combine <- data.frame(interest_over_time_combine)
+colnames(interest_over_time_combine) <- c("Date", "World Cup Hits", "Olympic Games Hits", "Commonwealth Games Hits", "League of Legends Hits", "Dota 2 Hits")
+interest_over_time_combine <- interest_over_time_combine %>% pivot_longer(names_to = "Games", values_to = "Hits", cols = c(2:6))
+interest_over_time_combine$Date <- as.Date(interest_over_time_combine$Date)
+colnames(interest_over_time_combine) <- c("Date", "Sport Events", "Hits")
+```
+
+## Analysis with Search Hits over time{.tabset}
+
+### Transition Over Time Graph - Animation
+```{r, warning = FALSE, echo=FALSE, message=FALSE}
+interest_over_time_combine %>%
+  ggplot(aes(x=Date, y=`Hits`, group=`Sport Events`, color=`Sport Events`)) +
+  geom_line() +
+  geom_point() +
+  scale_color_viridis(discrete = TRUE) +
+  ggtitle("Search Trends over Dates in 2022 for Different Sport Events") +
+  ylab("Search Hits Trends") +
+  labs(fill = "Sport Event", title = "Figure 4: Search Hits in 2022 with all Sport Events") +
+  theme_light() +
+  transition_reveal(Date)
+```
+
+Figure 4 above shows how the search hits transition for each sport events in 2022.
+
+---
+
+### Transition Over Time Graph - Interactive
+```{r, warning = FALSE, message=FALSE, echo=FALSE}
+line_plot <- interest_over_time_combine %>%
+  ggplot(aes(x=Date, y=`Hits`, group=`Sport Events`, color=`Sport Events`)) +
+  geom_line() +
+  scale_color_viridis(discrete = TRUE) +
+  ylab("Search Hits Trends") +
+  labs(fill = "Sport Event", title = "Figure 5: Interactive Search Hits in 2022 with all Sport Events") +
+  theme_light() 
+ggplotly(line_plot)
+```
+
+Figure 5 above shows the different search hits in weekly with the date as the start of the week and the number represents the search hits for that event. Each line represents different sports event and we can choose only certain events if we would want to compare a particular set of sport events. 
+
+We can see that most events have a higher peak when the event is on-going. However, for the World Cup, we can see the search trend did not go down significantly compared to others and there are higher search trends before the events start compared to other events. For both Commonwealth Games and Olympic games, the search trend went down extremely fast after the event had concluded. For both the esports (Dota 2 and League of Legends), we can see there are still some slightly search queries being requested throughout the year. 
+
+---

@@ -1,0 +1,1739 @@
+"City","Hits"
+"Beijing",100
+"North Bay",100
+"Riga",100
+"Ljubljana",97
+"Cordova Bay",90.5
+"Canberra",90
+"Fremont",90
+"Holladay",89
+"St. John's",87.5
+"Sudbury",86
+"Guwahati",84
+"Maribor",83
+"Christchurch",82
+"Bareilly",80
+"Mira Bhayandar",80
+"Sydney",80
+"Goleta",79
+"Saskatoon",78.6666666666667
+"Kingston",78
+"Adelaide",77
+"Kaysville",77
+"Kelowna",77
+"Saint Catharines",77
+"Jamshedpur",76
+"Gold Coast",75
+"Ranchi",75
+"Moncton",73.5
+"Birmingham",73
+"Bratislava",72.5
+"Meerut",71
+"Nashik",71
+"Bloomington",70.6666666666667
+"North Vancouver",70.6666666666667
+"Windsor",70.5
+"Richmond",69.8
+"Chantilly",68
+"Waterloo",67.3333333333333
+"Port Coquitlam",67
+"Salt Lake City",67
+"Kanpur",65
+"Lethbridge",65
+"London",65
+"Peterborough",65
+"Brisbane",64.5
+"Pittsfield Charter Township",64
+"Rochester",64
+"Kamloops",63
+"Coquitlam",62.6666666666667
+"Hobart",62
+"Townsville",62
+"Evanston",61
+"Kalyan",61
+"Kitchener",61
+"Burnaby",60.5
+"Prince George",60.5
+"Bradford West Gwillimbury",59
+"Yerevan",59
+"Richmond Hill",57.25
+"Brno",57
+"Halifax",56
+"Burlington",55
+"Cary",55
+"College Station",54
+"Markham",54
+"Orillia",54
+"Ulaanbaatar",52.5
+"Shanghai",52
+"Oakville",51
+"Regina",49.3333333333333
+"Kawartha Lakes",49
+"Langley",49
+"New Westminster",49
+"Ottawa",48.75
+"Greater Noida",48
+"Abbotsford",47.5
+"Arcadia",47
+"Bay Lake",47
+"Winnipeg",46.5
+"Tallinn",45
+"Centennial",43
+"Edina",43
+"Thunder Bay",42
+"Iowa City",41
+"Vancouver",40.6666666666667
+"Pickering",40
+"Skopje",39
+"Calgary",37.3333333333333
+"Vaughan",36.3333333333333
+"Victoria",36.3333333333333
+"Sunnyvale",36
+"Belleville",35
+"Bridgewater",35
+"Vallejo",35
+"Edmonton",34.6666666666667
+"Mississauga",34
+"Aurora",30
+"Guelph",30
+"Surrey",30
+"Fredericton",28
+"Brossard",23
+"Kaunas",18
+"Sherbrooke",17
+"Arvada",15
+"Gatineau",14
+"Longueuil",12
+"Montreal",12
+"Trondheim",12
+"Laval",11
+"Levis",11
+"Québec City",11
+"Brașov",9
+"Hamilton",9
+"Toronto",9
+"Kuching",8
+"Bern",7
+"Aalen",NA
+"Aberdeen",NA
+"Acri",NA
+"Addis Ababa",NA
+"Adlkofen",NA
+"Agartala",NA
+"Agios Dimitrios",NA
+"Air Itam",NA
+"Airdrie",NA
+"Aizawl",NA
+"Ajax",NA
+"Akola",NA
+"Alameda",NA
+"Alamo",NA
+"Alba Iulia",NA
+"Albany",NA
+"Alhambra",NA
+"Aligarh",NA
+"Alimos",NA
+"Alma",NA
+"Aloha",NA
+"Alor Setar",NA
+"Alpharetta",NA
+"Alphen aan den Rijn",NA
+"Altadena",NA
+"Aluva",NA
+"Alwar",NA
+"Amaria",NA
+"Ambala Cantt",NA
+"Amelia",NA
+"American Fork",NA
+"Amherstburg",NA
+"Amravati",NA
+"Amritsar",NA
+"Amstelveen",NA
+"Amsterdam-Zuidoost",NA
+"Anamosa",NA
+"Anderson",NA
+"Andover",NA
+"Angus",NA
+"Ankeny",NA
+"Ann Arbor",NA
+"Annandale",NA
+"Annapolis",NA
+"Antigonish",NA
+"Apex",NA
+"Apollo Beach",NA
+"Apple Valley",NA
+"Arden-Arcade",NA
+"Arendal",NA
+"Arley",NA
+"Arlington Heights",NA
+"Armstrong",NA
+"Arnprior",NA
+"Ashburn",NA
+"Asheville",NA
+"Aspen",NA
+"Assendelft",NA
+"Aston",NA
+"Atascadero",NA
+"Athens",NA
+"Atlantic City",NA
+"Atlantis",NA
+"Auburn",NA
+"Auchterarder",NA
+"Augusta",NA
+"Aventura",NA
+"Avon",NA
+"Avondale Estates",NA
+"Awassa",NA
+"Azamgarh",NA
+"Bacolod",NA
+"Baden",NA
+"Badlapur",NA
+"Bahadurgarh",NA
+"Bainbridge",NA
+"Bainbridge Island",NA
+"Bajeti",NA
+"Bakionica",NA
+"Balasore",NA
+"Balurghat",NA
+"Bancroft",NA
+"Bandar Seri Begawan",NA
+"Bandgarwadi",NA
+"Bang Pu Mai",NA
+"Bangurkela",NA
+"Banja Luka",NA
+"Banská Bystrica",NA
+"Baraboo",NA
+"Bargarh",NA
+"Baripada",NA
+"Barrie",NA
+"Bartonville",NA
+"Bastrop",NA
+"Batman",NA
+"Batu Caves",NA
+"Bay Roberts",NA
+"Bayan Lepas",NA
+"Bayshore Gardens",NA
+"Beaconsfield",NA
+"Bear",NA
+"Beaumont",NA
+"Beavercreek",NA
+"Beckett Ridge",NA
+"Bedford",NA
+"Bedlington",NA
+"Bee Cave",NA
+"Beeston",NA
+"Bel Air South",NA
+"Belfair",NA
+"Bellingham",NA
+"Bellmore",NA
+"Beloit",NA
+"Benaulim",NA
+"Bendigo",NA
+"Benicia",NA
+"Berhampore",NA
+"Berlin",NA
+"Berwyn",NA
+"Bethel",NA
+"Betul",NA
+"Bevier",NA
+"Bhajgaon",NA
+"Bhilai",NA
+"Biddeford",NA
+"Big Bear Lake",NA
+"Big Spring",NA
+"Billings",NA
+"Binghamton",NA
+"Birch Bay",NA
+"Bismarck",NA
+"Black Diamond",NA
+"Blackman",NA
+"Blacksburg",NA
+"Blaine",NA
+"Bloomfield Township",NA
+"Bloomingdale",NA
+"Blountville",NA
+"Blue Mounds",NA
+"Blue Springs",NA
+"Bluffdale",NA
+"Blyth",NA
+"Bnei Brak",NA
+"Boardman",NA
+"Bokaro Steel City",NA
+"Bolingbrook",NA
+"Bollington",NA
+"Bolpur",NA
+"Bolton",NA
+"Bon Air",NA
+"Bongaigaon",NA
+"Bonner-West Riverside",NA
+"Bonney Lake",NA
+"Boortmeerbeek",NA
+"Boranada",NA
+"Botevgrad",NA
+"Bothell",NA
+"Boucherville",NA
+"Boulder",NA
+"Bournemouth",NA
+"Bowling Green",NA
+"Bowmanville",NA
+"Bowral",NA
+"Boxford",NA
+"Bozeman",NA
+"Braintree",NA
+"Brandon",NA
+"Brandwijk",NA
+"Branford",NA
+"Brant",NA
+"Brantford",NA
+"Brea",NA
+"Breclav",NA
+"Brent",NA
+"Brentford",NA
+"Brentwood",NA
+"Brezovica pri Ljubljani",NA
+"Brežice",NA
+"Brick",NA
+"Brighton",NA
+"Brinsworth",NA
+"Brocēni",NA
+"Brookfield",NA
+"Brookline",NA
+"Brooklyn Park",NA
+"Bryan",NA
+"Bubiai",NA
+"Buena Park",NA
+"Buffalo",NA
+"Buffalo Grove",NA
+"Buford",NA
+"Bukhara",NA
+"Bukit Mertajam",NA
+"Buleleng",NA
+"Bundi",NA
+"Burke",NA
+"Burnham",NA
+"Burns Lake",NA
+"Burnsville",NA
+"Burton upon Stather",NA
+"Burton upon Trent",NA
+"Butterworth",NA
+"Bærum",NA
+"Cade",NA
+"Caguas",NA
+"Cairns",NA
+"Caldwell",NA
+"Caledon",NA
+"Caledonia",NA
+"Cambrian Park",NA
+"Cambridge",NA
+"Campbell",NA
+"Campbell River",NA
+"Camrose",NA
+"Candiac",NA
+"Canmore",NA
+"Cantley",NA
+"Canton",NA
+"Cape Coral",NA
+"Carleton",NA
+"Carleton Place",NA
+"Carlisle",NA
+"Carlsbad",NA
+"Carmel",NA
+"Carmel Valley",NA
+"Carmichael",NA
+"Carol Stream",NA
+"Carrboro",NA
+"Carshalton",NA
+"Carthage",NA
+"Casas Adobes",NA
+"Castle Rock",NA
+"Castlegar",NA
+"Castro Valley",NA
+"Catharpin",NA
+"Cava de' Tirreni",NA
+"Cedar City",NA
+"Celebration",NA
+"Celje",NA
+"Centerville",NA
+"Central Coast",NA
+"Central Point",NA
+"Chai Chumphon",NA
+"Chakma Block Number 5",NA
+"Chakma Block Number 8",NA
+"Chalco",NA
+"Champaign",NA
+"Chandigarh",NA
+"Changaroth",NA
+"Chanhassen",NA
+"Chapel Hill",NA
+"Charles Town",NA
+"Charlottesville",NA
+"Charlottetown",NA
+"Chatham-Kent",NA
+"Chauny",NA
+"Chemainus",NA
+"Cherry Hill",NA
+"Chester",NA
+"Chesterfield",NA
+"Cheswold",NA
+"Chevy Chase",NA
+"Chickerell",NA
+"Chilliwack",NA
+"Chino Hills",NA
+"Chippewa Falls",NA
+"Chuchelna",NA
+"Chula Vista",NA
+"Châteauguay",NA
+"Châtillon",NA
+"Cinco Ranch",NA
+"Ciudad del Carmen",NA
+"Clarence-Rockland",NA
+"Clarksville",NA
+"Claymont",NA
+"Clayton-le-Woods",NA
+"Cleator Moor",NA
+"Clemson",NA
+"Clermont-Ferrand",NA
+"Cliffside Park",NA
+"Coal City",NA
+"Cobourg",NA
+"Cochrane",NA
+"Coffs Harbour",NA
+"Cold Lake",NA
+"Cold Springs",NA
+"Coldwater",NA
+"Cole Harbour",NA
+"Collingwood",NA
+"Collingwood Cove",NA
+"Cologny",NA
+"Colonial Pine Hills",NA
+"Colorado City",NA
+"Colorado Springs",NA
+"Columbia",NA
+"Columbus",NA
+"Colwood",NA
+"Combes",NA
+"Congers",NA
+"Cookham",NA
+"Coppell",NA
+"Corcoran",NA
+"Corinth",NA
+"Corner Brook",NA
+"Cornwall",NA
+"Corona",NA
+"Cortland",NA
+"Costa Mesa",NA
+"Cotai",NA
+"Cotati",NA
+"Coto de Caza",NA
+"Cottage Grove",NA
+"Cottage Lake",NA
+"Cottonwood Heights",NA
+"Courtenay",NA
+"Courtice",NA
+"Covina",NA
+"Cowansville",NA
+"Cranbrook",NA
+"Cranford",NA
+"Cranleigh",NA
+"Creedmoor",NA
+"Crest Hill",NA
+"Creve Coeur",NA
+"Crofton",NA
+"Crompond",NA
+"Cromwell",NA
+"Crossgates",NA
+"Crozet",NA
+"Cuautla",NA
+"Cullman",NA
+"Cumberland",NA
+"Cumming",NA
+"Cupertino",NA
+"Cuttack",NA
+"Cypress",NA
+"Côte Saint-Luc",NA
+"Dakshin Rajyadharpur",NA
+"Daly City",NA
+"Danbury",NA
+"Danderhall",NA
+"Danvers",NA
+"Danville",NA
+"Darien",NA
+"Darlington",NA
+"Dartmouth",NA
+"Darwin",NA
+"Dauphin",NA
+"Davenport",NA
+"Davidson",NA
+"Dearborn",NA
+"Deerfield Beach",NA
+"Dehradun",NA
+"Delaware",NA
+"Delmar",NA
+"Delray Beach",NA
+"Delta",NA
+"Demarest",NA
+"Denison",NA
+"Dentsville",NA
+"Denville",NA
+"Deoghar",NA
+"Depew",NA
+"Deptford Township",NA
+"Des Plaines",NA
+"Desert Aire",NA
+"Deva",NA
+"Devon",NA
+"Devonport",NA
+"Dhanbad",NA
+"Dharamshala",NA
+"Dharan",NA
+"Dhubri",NA
+"Diamond Bar",NA
+"Dibrugarh",NA
+"Dieppe",NA
+"Dimapur",NA
+"Dipolog City",NA
+"Doboj",NA
+"Dollard-Des Ormeaux",NA
+"Dombivli",NA
+"Domžale",NA
+"Don Kaeo",NA
+"Dorridge",NA
+"Dothan",NA
+"Dover",NA
+"Downingtown",NA
+"Dridu",NA
+"Drogheda",NA
+"Drummondville",NA
+"Dublin",NA
+"Dubuque",NA
+"Dunedin",NA
+"Dunlap",NA
+"Dunmurry",NA
+"Dunstable",NA
+"Durgapur",NA
+"Durham",NA
+"Díli",NA
+"Eagan",NA
+"Eagle",NA
+"East Brunswick",NA
+"East Cobb",NA
+"East Greenbush",NA
+"East Gwillimbury",NA
+"East Haven",NA
+"East Hopetown",NA
+"East Kilbride",NA
+"East Lansing",NA
+"East London",NA
+"East Meadow",NA
+"East Palo Alto",NA
+"East Point",NA
+"Eastbourne",NA
+"Easton",NA
+"Eaton",NA
+"Echo Lake",NA
+"Eden Prairie",NA
+"Edgewood",NA
+"Edmond",NA
+"Edwards",NA
+"El Cerrito",NA
+"Elizabeth",NA
+"Elk Grove",NA
+"Elkridge",NA
+"Ellicott City",NA
+"Elliot Lake",NA
+"Elmhurst",NA
+"Elora",NA
+"Ely",NA
+"Emerson",NA
+"Emeryville",NA
+"Emmen",NA
+"Encinitas",NA
+"Enderby",NA
+"Enfield",NA
+"Englefield Green",NA
+"Ennis",NA
+"Enterprise",NA
+"Epworth",NA
+"Erie",NA
+"Erode",NA
+"Essex",NA
+"Estero",NA
+"Etterbeek",NA
+"Eugene",NA
+"Eungella",NA
+"Everett",NA
+"Ewa Beach",NA
+"Ewa Villages",NA
+"Exeter",NA
+"Exton",NA
+"Fair Lawn",NA
+"Fairbanks",NA
+"Fairfax",NA
+"Fairfax Station",NA
+"Fairfield",NA
+"Fairmount",NA
+"Fano",NA
+"Farmington",NA
+"Farmington Hills",NA
+"Farnborough",NA
+"Faulconbridge",NA
+"Fayetteville",NA
+"Feasterville-Trevose",NA
+"Federal Way",NA
+"Fergus",NA
+"Ferry Pass",NA
+"Firozabad",NA
+"Fishers",NA
+"Fitchburg",NA
+"Flagstaff",NA
+"Flemington",NA
+"Flin Flon",NA
+"Florham Park",NA
+"Florin",NA
+"Folkestone",NA
+"Fordham",NA
+"Forel",NA
+"Forest Hills",NA
+"Fort Bragg",NA
+"Fort Dodge",NA
+"Fort Erie",NA
+"Fort Lee",NA
+"Fort Mackay",NA
+"Fort Myers",NA
+"Fort Nelson",NA
+"Fort Riley",NA
+"Foster City",NA
+"Fountain Hills",NA
+"Fox Chapel",NA
+"Foxton Beach",NA
+"Framingham",NA
+"Franconia",NA
+"Franklin Township",NA
+"Fraser",NA
+"Fredericksburg",NA
+"Fuengirola",NA
+"Fulda",NA
+"Gainesville",NA
+"Gaithersburg",NA
+"Gallatin",NA
+"Gandhidham",NA
+"Gangtok",NA
+"Gannat",NA
+"Garden Grove",NA
+"Garden Prairie",NA
+"Garfield",NA
+"Gastonville",NA
+"Geelong",NA
+"Gelugor",NA
+"Genemuiden",NA
+"Geneva",NA
+"Genoa",NA
+"Georgetown Township",NA
+"Georgina",NA
+"Gibsonia",NA
+"Gig Harbor",NA
+"Giussano",NA
+"Glace Bay",NA
+"Gladstone",NA
+"Glen Burnie",NA
+"Glendora",NA
+"Glenview",NA
+"Gloucester",NA
+"Goddard",NA
+"Goderich",NA
+"Gola Range",NA
+"Golaghat",NA
+"Gold Canyon",NA
+"Golden Gate",NA
+"Golf",NA
+"Gondal",NA
+"Gonzales",NA
+"Goombungee",NA
+"Granby",NA
+"Grand Anse Village",NA
+"Grand Forks",NA
+"Grand Haven",NA
+"Grand Junction",NA
+"Grand Prairie",NA
+"Grande Prairie",NA
+"Granger",NA
+"Grants Pass",NA
+"Grapevine",NA
+"Gravenhurst",NA
+"Grays",NA
+"Grayson",NA
+"Great Dunmow",NA
+"Great Falls",NA
+"Greenbelt",NA
+"Greenfield",NA
+"Greensboro",NA
+"Greenwich",NA
+"Grimsby",NA
+"Groningen",NA
+"Grosuplje",NA
+"Groton",NA
+"Grove City",NA
+"Guadalupe",NA
+"Guildford",NA
+"Gulf Shores",NA
+"Guna",NA
+"Gurnee",NA
+"Gyumri",NA
+"Haddonfield",NA
+"Hailey",NA
+"Halesowen",NA
+"Halton Hills",NA
+"Hamburg",NA
+"Hamilton Township",NA
+"Hamirpur",NA
+"Hammond",NA
+"Hammonton",NA
+"Hampstead",NA
+"Hanamkonda",NA
+"Hangzhou",NA
+"Hannibal",NA
+"Hanover",NA
+"Haridwar",NA
+"Harlingen",NA
+"Harrisonburg",NA
+"Harrow",NA
+"Hastings",NA
+"Haverhill",NA
+"Hawaiian Paradise Park",NA
+"Hawthorne",NA
+"Hayama",NA
+"Heidelberg",NA
+"Helmond",NA
+"Hemel Hempstead",NA
+"Henderson",NA
+"Herbert",NA
+"Herent",NA
+"Hershey",NA
+"Hicksville",NA
+"High Point",NA
+"Highland Charter Township",NA
+"Highlands Ranch",NA
+"Hillsboro",NA
+"Hilton Head Island",NA
+"Hobe Sound",NA
+"Hoboken",NA
+"Hockessin",NA
+"Hoddesdon",NA
+"Hoffman Estates",NA
+"Holmdel",NA
+"Holt",NA
+"Homer Glen",NA
+"Honolulu",NA
+"Hoover",NA
+"Hop Bottom",NA
+"Hopedale",NA
+"Horsham",NA
+"Horta",NA
+"Hoshiarpur",NA
+"Hosur",NA
+"Hove",NA
+"Howards Grove",NA
+"Huddersfield",NA
+"Hudson",NA
+"Hugglescote",NA
+"Huis ter Heide",NA
+"Huixquilucan de Degollado",NA
+"Huntington",NA
+"Huntington Bay",NA
+"Huntsville",NA
+"Huron Charter Township",NA
+"Huron East",NA
+"Ickenham",NA
+"Idaho Falls",NA
+"Ile des Chênes",NA
+"Imphal",NA
+"Independence charter Township",NA
+"Indian Trail",NA
+"Inglewood",NA
+"Innisfil",NA
+"Invercargill",NA
+"Ipoh",NA
+"Ipswich",NA
+"Irondequoit",NA
+"Irwin",NA
+"Itarsi",NA
+"Ithaca",NA
+"Jackson",NA
+"Jakobsberg",NA
+"Jamindan",NA
+"Jatola",NA
+"Jeju-si",NA
+"Jelgava",NA
+"Jhansi",NA
+"Joliette",NA
+"Jonava",NA
+"Joplin",NA
+"Jordan",NA
+"Jorhat",NA
+"Josephburg",NA
+"Juriquilla",NA
+"Jūrmala",NA
+"Kadodara",NA
+"Kakinada",NA
+"Kamalpur",NA
+"Kamas",NA
+"Kanchikacherla",NA
+"Kapuskasing",NA
+"Karankol",NA
+"Karlstad",NA
+"Karnal",NA
+"Karur",NA
+"Katy",NA
+"Keene",NA
+"Keeseville",NA
+"Kemptville",NA
+"Ken Caryl",NA
+"Kenmore",NA
+"Kennebunk",NA
+"Kennesaw",NA
+"Kennewick",NA
+"Kenosha",NA
+"Kent",NA
+"Kentville",NA
+"Kentwood",NA
+"Kenwood",NA
+"Kenyon",NA
+"Kepala Batas",NA
+"Kernersville",NA
+"Ketereh",NA
+"Kettering",NA
+"Keystone",NA
+"Khandwa",NA
+"Kigali",NA
+"Kihei",NA
+"Kilkenny",NA
+"Killay",NA
+"King's Lynn",NA
+"Kinglassie",NA
+"Kings Point",NA
+"Kingsville",NA
+"Kinross",NA
+"Kirchzarten",NA
+"Kirkcaldy",NA
+"Kirkintilloch",NA
+"Kirkland",NA
+"Kirtipur",NA
+"Kishanpur urf Bakhshiwala",NA
+"Kissimmee",NA
+"Kitanakagusuku",NA
+"Knights Landing",NA
+"Ko Mak",NA
+"Kofu",NA
+"Kohima",NA
+"Kojonup",NA
+"Kokomo",NA
+"Kolomna",NA
+"Konpala",NA
+"Korba",NA
+"Koriella",NA
+"Kortenaken",NA
+"Kota",NA
+"Kota Kinabalu",NA
+"Kota Kinabatangan",NA
+"Košice",NA
+"Kranj",NA
+"Kristiansand",NA
+"Kshetrapal",NA
+"Kuala Belait",NA
+"Kuala Ketil",NA
+"Kuala Krai",NA
+"Kulim",NA
+"Kurukshetra",NA
+"Kuttanad Taluk",NA
+"Köngen",NA
+"L'Ancienne-Lorette",NA
+"L'Île-Perrot",NA
+"La Cañada Flintridge",NA
+"La Mesa",NA
+"La Pine",NA
+"La Prairie",NA
+"La Rochelle",NA
+"La Trinidad",NA
+"LaSalle",NA
+"Labrador City",NA
+"Labu",NA
+"Lacey",NA
+"Lafayette Township",NA
+"Lahti",NA
+"Lajkovac Selo",NA
+"Lake Andes",NA
+"Lake Darby",NA
+"Lake Forest",NA
+"Lake Odessa",NA
+"Lake Oswego",NA
+"Lake Ridge",NA
+"Lake Zurich",NA
+"Lakeshore",NA
+"Lakeville",NA
+"Lakewood",NA
+"Lanaken",NA
+"Lancaster",NA
+"Land O' Lakes",NA
+"Langgar",NA
+"Lansing",NA
+"Lapeer",NA
+"Laramie",NA
+"Larchmont",NA
+"Larkin Charter Township",NA
+"Latur",NA
+"Lausanne",NA
+"Lawrence",NA
+"Lawrence Township",NA
+"Leawood",NA
+"Lebanon",NA
+"Leduc",NA
+"Lely",NA
+"Lenexa",NA
+"Lenham",NA
+"Lenox",NA
+"Leominster",NA
+"Letterkenny",NA
+"Leuven",NA
+"Levice",NA
+"Lewes",NA
+"Lewis Center",NA
+"Lexington",NA
+"Liberty",NA
+"Lincoln",NA
+"Lincoln Park",NA
+"Lindale",NA
+"Lindenhurst",NA
+"Linganore-Bartonsville",NA
+"Lithonia",NA
+"Little River",NA
+"Littleton",NA
+"Live Oak",NA
+"Livermore",NA
+"Livigno",NA
+"Livingston",NA
+"Livonia",NA
+"Lloydminster",NA
+"Lodi",NA
+"Lokeren",NA
+"Lombard",NA
+"Lomita",NA
+"Lonaconing",NA
+"Londonderry",NA
+"Long Eaton",NA
+"Longmeadow",NA
+"Longview Heights",NA
+"Lorain",NA
+"Los Altos",NA
+"Loughborough",NA
+"Loveland",NA
+"Lower Grand Lagoon",NA
+"Lower Hutt",NA
+"Lower Sackville",NA
+"Lucena",NA
+"Lutong",NA
+"Luxembourg City",NA
+"Lynbrook",NA
+"Lynchburg",NA
+"Lyndhurst",NA
+"Lytham Saint Annes",NA
+"Mackay",NA
+"Macon",NA
+"Madisonville",NA
+"Mahoba",NA
+"Mahomet",NA
+"Maithon",NA
+"Makakilo",NA
+"Malden",NA
+"Mamaroneck",NA
+"Mammoth Lakes",NA
+"Manalapan Township",NA
+"Manchester",NA
+"Mandalay",NA
+"Mandurah",NA
+"Mandya",NA
+"Mangkolemba",NA
+"Manhasset",NA
+"Manhattan Beach",NA
+"Mankato",NA
+"Mansa",NA
+"Mansfield",NA
+"Mansfield Woodhouse",NA
+"Maple Ridge",NA
+"Maplewood",NA
+"Marang",NA
+"Marco Island",NA
+"Marietta-Alderwood",NA
+"Marinette",NA
+"Marion",NA
+"Marlboro Township",NA
+"Marlow Heights",NA
+"Marquette",NA
+"Marshfield",NA
+"Marston Green",NA
+"Marton-in-Cleveland",NA
+"Masai",NA
+"Mascouche",NA
+"Massillon",NA
+"Matfield",NA
+"Mathura",NA
+"Matthews",NA
+"Mau",NA
+"Mauje Dapoli",NA
+"McConnell Air Force Base",NA
+"Meaford",NA
+"Mechanicsburg",NA
+"Mechanicsville",NA
+"Medford",NA
+"Medicine Hat",NA
+"Medina",NA
+"Medinipur",NA
+"Melilla",NA
+"Melrose Park",NA
+"Menifee",NA
+"Menlo Park",NA
+"Meridian",NA
+"Merrifield",NA
+"Miami Gardens",NA
+"Mickleton",NA
+"Middleton",NA
+"Middletown",NA
+"Midland",NA
+"Midsomer Norton",NA
+"Milford",NA
+"Mililani",NA
+"Mill Creek",NA
+"Millstream",NA
+"Milton",NA
+"Miltonvale Park",NA
+"Minetto",NA
+"Minneola",NA
+"Minnetonka",NA
+"Mioveni",NA
+"Mirabel",NA
+"Miramichi",NA
+"Mission",NA
+"Mission Bend",NA
+"Mission Viejo",NA
+"Mississippi Mills",NA
+"Missoula",NA
+"Moga",NA
+"Mojosari",NA
+"Molesey",NA
+"Monaghan",NA
+"Mono",NA
+"Monroe",NA
+"Monroe Charter Township",NA
+"Mont-Saint-Hilaire",NA
+"Mont-Tremblant",NA
+"Montclair",NA
+"Montebello",NA
+"Monterey Park",NA
+"Monterotondo",NA
+"Montevallo",NA
+"Montgomery",NA
+"Montville",NA
+"Moore",NA
+"Moose Jaw",NA
+"Moradabad",NA
+"Moraga",NA
+"Moreno Valley",NA
+"Moroyama",NA
+"Morro Bay",NA
+"Moscow",NA
+"Moss",NA
+"Motichur Range",NA
+"Mound",NA
+"Moundville",NA
+"Mount Ivy",NA
+"Mount Juliet",NA
+"Mount Laurel",NA
+"Mount Pearl",NA
+"Mount Pleasant",NA
+"Mount Royal",NA
+"Mount Stoker",NA
+"Mount Washington",NA
+"Mountain Home",NA
+"Mountain View",NA
+"Moy",NA
+"Mramoren",NA
+"Muhamma",NA
+"Mukilteo",NA
+"Murray",NA
+"Murrayville",NA
+"Murwillumbah",NA
+"Muzaffarnagar",NA
+"Muzaffarpur",NA
+"Nadiad",NA
+"Nagaon",NA
+"Naguilian",NA
+"Nala Sopara",NA
+"Nampa",NA
+"Nanaimo",NA
+"Nanima",NA
+"Nanjing",NA
+"Nantou City",NA
+"Naples",NA
+"Nasherkuli",NA
+"Nashua",NA
+"Nassau",NA
+"Natick",NA
+"Navarre",NA
+"Nelson",NA
+"New Albany",NA
+"New Berlin",NA
+"New Brighton",NA
+"New Gloucester",NA
+"New Harmony",NA
+"New Oxford",NA
+"New Port Richey East",NA
+"New River",NA
+"New Tecumseth",NA
+"Newark",NA
+"Newmachar",NA
+"Newmarket",NA
+"Newport",NA
+"Newport Beach",NA
+"Newquay",NA
+"Newton",NA
+"Newtown",NA
+"Niagara Falls",NA
+"Nicolet",NA
+"Nicosia",NA
+"Nidtha",NA
+"Nijmegen",NA
+"Nine Mile",NA
+"Nipomo",NA
+"Niš",NA
+"Noblesville",NA
+"Norman",NA
+"North Attleborough",NA
+"North Baddesley",NA
+"North Creek",NA
+"North Decatur",NA
+"North Lakhimpur",NA
+"North Marysville",NA
+"North Miami Beach",NA
+"North Naples",NA
+"North New Hyde Park",NA
+"North Ogden",NA
+"North Olmsted",NA
+"Northampton",NA
+"Norton Shores",NA
+"Norwalk",NA
+"Norwich",NA
+"Notre-Dame-de-l'Île-Perrot",NA
+"Nottingham",NA
+"Nugegoda",NA
+"Námestovo",NA
+"O'Fallon",NA
+"Oak Harbor",NA
+"Oak Lawn",NA
+"Oak Ridge",NA
+"Oakton",NA
+"Obrne",NA
+"Ocala",NA
+"Oceanside",NA
+"Odenton",NA
+"Odessa",NA
+"Ogden",NA
+"Ognes",NA
+"Ogolcho",NA
+"Ogre",NA
+"Okotoks",NA
+"Old Bridge Township",NA
+"Olds",NA
+"Oosterbeek",NA
+"Opwijk",NA
+"Orange",NA
+"Orangeville",NA
+"Orchard Lake Village",NA
+"Orem",NA
+"Orion charter Township",NA
+"Orland Park",NA
+"Orvault",NA
+"Oshawa",NA
+"Oshkosh",NA
+"Ovilla",NA
+"Oxford",NA
+"Paisley",NA
+"Pak Kret",NA
+"Palm Bay",NA
+"Palm Springs",NA
+"Palmerston North",NA
+"Palo Alto",NA
+"Palárikovo",NA
+"Panchkula",NA
+"Paonta Sahib",NA
+"Papakura",NA
+"Papillion",NA
+"Paradise",NA
+"Paraparaumu",NA
+"Pardubice",NA
+"Parit Buntar",NA
+"Park City",NA
+"Park Gate",NA
+"Park Ridge",NA
+"Parker",NA
+"Parkes",NA
+"Parksville",NA
+"Parma",NA
+"Parry Sound",NA
+"Parsippany-Troy Hills",NA
+"Pasaje Canton",NA
+"Passaic",NA
+"Patan",NA
+"Pathankot",NA
+"Patharkandi",NA
+"Patiala",NA
+"Patos",NA
+"Pawtucket",NA
+"Pearland",NA
+"Pelham",NA
+"Penryn",NA
+"Pensacola",NA
+"Penticton",NA
+"Peoria",NA
+"Pepper Pike",NA
+"Permatang Pauh",NA
+"Petropavlivs'ka Borshchahivka",NA
+"Phoenixville",NA
+"Picnic Point-North Lynnwood",NA
+"Pilsen",NA
+"Pinckney",NA
+"Pincourt",NA
+"Pinellas Park",NA
+"Pirdop",NA
+"Pitești",NA
+"Pitt Meadows",NA
+"Pittsford",NA
+"Placentia",NA
+"Plainsboro Center",NA
+"Plantation",NA
+"Playa del Carmen",NA
+"Pleasant Grove",NA
+"Pleasant Prairie",NA
+"Pleasant View",NA
+"Ploiești",NA
+"Plum",NA
+"Plungė",NA
+"Plymouth",NA
+"Plymouth Charter Township",NA
+"Pocatello",NA
+"Pointe-Claire",NA
+"Pompano Beach",NA
+"Poquoson",NA
+"Porepunkah",NA
+"Porirua",NA
+"Porretta Terme",NA
+"Port Colborne",NA
+"Port Dickson",NA
+"Port Hope",NA
+"Port Klang",NA
+"Port Moody",NA
+"Port Washington",NA
+"Portimão",NA
+"Portland",NA
+"Potomac",NA
+"Potsdam",NA
+"Powder Springs",NA
+"Prai",NA
+"Prešov",NA
+"Prince Albert",NA
+"Prince Edward",NA
+"Princeton",NA
+"Pucklechurch",NA
+"Pundri",NA
+"Purau",NA
+"Purleigh",NA
+"Purnea",NA
+"Qualicum Beach",NA
+"Queen Creek",NA
+"Queensbury",NA
+"Queenstown",NA
+"Quinte West",NA
+"Radcliffe",NA
+"Railton",NA
+"Rajshahi",NA
+"Ramona",NA
+"Ranchettes",NA
+"Rancho Cordova",NA
+"Rancho Cucamonga",NA
+"Rancho Palos Verdes",NA
+"Rancho Santa Margarita",NA
+"Randogne",NA
+"Randolph",NA
+"Raniganj",NA
+"Ranikhet Range",NA
+"Ras Al-Khaimah",NA
+"Raseborg",NA
+"Rathdrum",NA
+"Rawang",NA
+"Reading",NA
+"Red Deer",NA
+"Redlands",NA
+"Redmond",NA
+"Redondo Beach",NA
+"Redwood City",NA
+"Reigate",NA
+"Rengalbahri",NA
+"Repentigny",NA
+"Revelstoke",NA
+"Reynoldsburg",NA
+"Richards Bay",NA
+"Richelieu",NA
+"Richland",NA
+"Richmond West",NA
+"Ridgeland",NA
+"Ridgemont",NA
+"Ridmalsar Purohitan",NA
+"Rimouski",NA
+"Ringsaker",NA
+"Ringwood",NA
+"Rio Rancho",NA
+"Ripanj",NA
+"Rishikesh",NA
+"River Falls",NA
+"Riverside",NA
+"Roanoke",NA
+"Robbinsville",NA
+"Rochdale",NA
+"Rochester Hills",NA
+"Rocklin",NA
+"Rockmart",NA
+"Rockville Centre",NA
+"Rogers",NA
+"Rohtak",NA
+"Roland",NA
+"Rolling Hills",NA
+"Romeoville",NA
+"Roosendaal",NA
+"Roselle",NA
+"Rosemead",NA
+"Rosetown",NA
+"Roslyn Heights",NA
+"Rossland",NA
+"Roswell",NA
+"Rourkela",NA
+"Rovaniemi",NA
+"Rowde",NA
+"Rowington",NA
+"Rowland Heights",NA
+"Roxbury Township",NA
+"Ruiselede",NA
+"Rural Retreat",NA
+"Rustington",NA
+"Rutland",NA
+"Ružomberok",NA
+"Rye",NA
+"Rümlang",NA
+"Saginaw Charter Township",NA
+"Saharsa",NA
+"Saint Augustine South",NA
+"Saint Charles",NA
+"Saint John",NA
+"Saint Leonards",NA
+"Saint Louis Park",NA
+"Saint Marys",NA
+"Saint Paul",NA
+"Saint Peters",NA
+"Saint Thomas",NA
+"Saint-Bernard",NA
+"Saint-Eustache",NA
+"Saint-Jean-sur-Richelieu",NA
+"Saint-Jérôme",NA
+"Sainte-Catherine",NA
+"Salaberry-de-Valleyfield",NA
+"Salaspils",NA
+"Sale",NA
+"Salem",NA
+"Salisbury",NA
+"Salmon Arm",NA
+"Salzburg",NA
+"Samarkand",NA
+"Sammamish",NA
+"San Carlos",NA
+"San Clemente",NA
+"San Gabriel",NA
+"San Juan del Río",NA
+"San Marino",NA
+"San Mateo",NA
+"San Pablo City",NA
+"San Rafael",NA
+"San Ramon",NA
+"Sandnes",NA
+"Sandy",NA
+"Sanford",NA
+"Sangli Miraj Kupwad",NA
+"Sangrur",NA
+"Sant Cugat del Vallès",NA
+"Santa Clara",NA
+"Santa Cruz do Bispo",NA
+"Santa Fe",NA
+"Santa Marta",NA
+"Santena",NA
+"Saranac Lake",NA
+"Sarasota",NA
+"Saratoga",NA
+"Saratoga Springs",NA
+"Sarnia",NA
+"Sarpsborg",NA
+"Saugeen Shores",NA
+"Sault Ste. Marie",NA
+"Sayreville",NA
+"Sayville",NA
+"Schenectady",NA
+"Schwyz",NA
+"Seal Beach",NA
+"Sechelt",NA
+"Security-Widefield",NA
+"Seekirchen am Wallersee",NA
+"Segamat District",NA
+"Senden",NA
+"Seremban",NA
+"Seri Kembangan",NA
+"Severna Park",NA
+"Shahjahanpur",NA
+"Sharon",NA
+"Shawville",NA
+"Sheboygan Falls",NA
+"Shelby charter Township",NA
+"Shelton",NA
+"Shenzhen",NA
+"Shepparton - Mooroopna",NA
+"Sherman",NA
+"Sherwood Park",NA
+"Shillong",NA
+"Shiloh",NA
+"Shimla",NA
+"Shkodër",NA
+"Shoreline",NA
+"Shrewsbury",NA
+"Sibu",NA
+"Sierra Vista",NA
+"Sierra Vista Southeast",NA
+"Silchar",NA
+"Siliau",NA
+"Silver Spring",NA
+"Simcoe",NA
+"Simi Valley",NA
+"Sinking Spring",NA
+"Sint-Truiden",NA
+"Sioux City",NA
+"Skien",NA
+"Skokie",NA
+"Smithfield",NA
+"Smyrna",NA
+"Snoqualmie",NA
+"Snyderville",NA
+"Sonapur Gaon",NA
+"Sonipat",NA
+"South Bend",NA
+"South Bradenton",NA
+"South Brunswick Township",NA
+"South Burlington",NA
+"South Farmingdale",NA
+"South Harrison Township",NA
+"South Hill",NA
+"South Jordan",NA
+"South Miami",NA
+"South Salt Lake",NA
+"South San Francisco",NA
+"South Valley Stream",NA
+"Southampton",NA
+"Southborough",NA
+"Southbury",NA
+"Southend-on-Sea",NA
+"Southgate",NA
+"Spartanburg",NA
+"Sparti",NA
+"Spencer",NA
+"Spokane Valley",NA
+"Spotsylvania Courthouse",NA
+"Spring Hill",NA
+"Springdale",NA
+"Springfield",NA
+"Springfield Township",NA
+"Spruce Grove",NA
+"Sri Muktsar Sahib",NA
+"St-Bruno-de-Montarville",NA
+"St. Albert",NA
+"St. Augustine",NA
+"St. George",NA
+"Staindrop",NA
+"Stanford",NA
+"Stanford in the Vale",NA
+"State College",NA
+"Steinbach",NA
+"Sterling",NA
+"Sterling Heights",NA
+"Stevens Point",NA
+"Stillwater",NA
+"Stoneham",NA
+"Stonewall",NA
+"Stonington",NA
+"Stord",NA
+"Stow",NA
+"Stratford",NA
+"Stuart",NA
+"Subang",NA
+"Subang Jaya",NA
+"Sucre",NA
+"Suisun City",NA
+"Summerland",NA
+"Summerside",NA
+"Sun City",NA
+"Sun City Center",NA
+"Sun City West",NA
+"Sun Lakes",NA
+"Sundridge",NA
+"Superior",NA
+"Surbiton",NA
+"Surizai Bala",NA
+"Surprise",NA
+"Sutton",NA
+"Sutton Coldfield",NA
+"Sutton-in-Ashfield",NA
+"Suva",NA
+"Swift Current",NA
+"Swinton",NA
+"Swissvale",NA
+"Swords",NA
+"Sycamore",NA
+"Sylvania",NA
+"Søborg",NA
+"Taber",NA
+"Table Top",NA
+"Taiping",NA
+"Talcahuano",NA
+"Tamworth",NA
+"Tanjung Bungah",NA
+"Tarahat",NA
+"Tartu",NA
+"Taunton",NA
+"Tauranga",NA
+"Taylor",NA
+"Taylorsville",NA
+"Taytay",NA
+"Templeuve",NA
+"Tequesta",NA
+"Terre Haute",NA
+"Terrebonne",NA
+"Tewksbury",NA
+"Texas charter Township",NA
+"Tezpur",NA
+"Tešanovci",NA
+"Tha Sala",NA
+"Thackerville",NA
+"Thai Buri",NA
+"The Meadows",NA
+"Thermal",NA
+"Thetford Mines",NA
+"Thoothukudi",NA
+"Thornaby",NA
+"Thornhill",NA
+"Thornton",NA
+"Thornton Dale",NA
+"Thorold",NA
+"Three Hills",NA
+"Three Rivers",NA
+"Thurston",NA
+"Tikamgarh",NA
+"Tillsonburg",NA
+"Timișoara",NA
+"Timmins",NA
+"Tinsukia",NA
+"Tipton",NA
+"Tiptree",NA
+"Tisdale",NA
+"Tiskili Khurd",NA
+"Titusville",NA
+"Toddington",NA
+"Tokoroa",NA
+"Tolga",NA
+"Toms River",NA
+"Tonawanda",NA
+"Tonyrefail",NA
+"Toowoomba",NA
+"Topeka",NA
+"Topoľčany",NA
+"Torquay",NA
+"Totton",NA
+"Towson",NA
+"Trail",NA
+"Traverse City",NA
+"Trbovlje",NA
+"Trenčín",NA
+"Trnava",NA
+"Tromsø",NA
+"Troy",NA
+"Truckee",NA
+"Truro",NA
+"Tuckahoe",NA
+"Tulcea",NA
+"Tumut",NA
+"Tuscaloosa",NA
+"Twickenham",NA
+"Twinsburg",NA
+"Tyngsborough",NA
+"Tyrone",NA
+"Tysons",NA
+"Ulgii",NA
+"Ullensaker",NA
+"Ulu Kinta",NA
+"Umbarkhed",NA
+"Union City",NA
+"Union charter Township",NA
+"University",NA
+"University Place",NA
+"Upesciems",NA
+"Upper Deerfield Township",NA
+"Upper Hutt",NA
+"Upper Saint Clair",NA
+"Uvysla",NA
+"Uxbridge",NA
+"Vaddeswaram",NA
+"Valparaiso",NA
+"Varennes",NA
+"Varna",NA
+"Vaudreuil-Dorion",NA
+"Veenendaal",NA
+"Veliko Gradište",NA
+"Veliko Tarnovo",NA
+"Venice",NA
+"Veracruz",NA
+"Verd",NA
+"Vernon",NA
+"Vero Beach",NA
+"Vestre Toten",NA
+"Vidisha",NA
+"Vienna Center",NA
+"Viernheim",NA
+"View Royal",NA
+"Villach",NA
+"Village of Pewaukee",NA
+"Villas",NA
+"Virar",NA
+"Volzhskiy",NA
+"Voorhees Township",NA
+"Võru",NA
+"Wadmalaw Island",NA
+"Wageningen",NA
+"Wagga Wagga",NA
+"Wahiawa",NA
+"Wake Forest",NA
+"Waltham",NA
+"Walton on the Naze",NA
+"Wandoor",NA
+"Wantagh",NA
+"Wapenveld",NA
+"Ware",NA
+"Warren",NA
+"Warsaw",NA
+"Warwick",NA
+"Washington",NA
+"Washington Township",NA
+"Waterford",NA
+"Waterford Township",NA
+"Watertown",NA
+"Watkins",NA
+"Waubaushene",NA
+"Wauconda",NA
+"Waukesha",NA
+"Wausau",NA
+"Waxahachie",NA
+"Wayne",NA
+"Webster",NA
+"Weigelstown",NA
+"Weir",NA
+"Welland",NA
+"Wellesley",NA
+"Wellington",NA
+"Welwyn Garden City",NA
+"Wenham",NA
+"West Allis",NA
+"West Babylon",NA
+"West Bend",NA
+"West Branch",NA
+"West Covina",NA
+"West Des Moines",NA
+"West Hartford",NA
+"West Hazleton",NA
+"West Jordan",NA
+"West Kelowna",NA
+"West Lafayette",NA
+"West Linn",NA
+"West New York",NA
+"West Nipissing",NA
+"West Norriton",NA
+"West Seneca",NA
+"West Vancouver",NA
+"West Windsor Township",NA
+"West Wittering",NA
+"West Wyomissing",NA
+"Westerly",NA
+"Westernport",NA
+"Westerville",NA
+"Westfield",NA
+"Westford",NA
+"Westlake",NA
+"Westlock",NA
+"Westmere",NA
+"Westminster",NA
+"Weston",NA
+"Weston-super-Mare",NA
+"Westwood",NA
+"Wexford",NA
+"Wheaton",NA
+"Wheaton-Glenmont",NA
+"Whistler",NA
+"Whitby",NA
+"Whitchurch-Stouffville",NA
+"White Bear Lake",NA
+"White Plains",NA
+"White Rock",NA
+"Whitehorse",NA
+"Wick",NA
+"Williams Lake",NA
+"Williamsburg",NA
+"Willow Grove",NA
+"Wilnecote",NA
+"Winchester",NA
+"Windham",NA
+"Winfield",NA
+"Wingham",NA
+"Winnfield",NA
+"Winona",NA
+"Winona Lake",NA
+"Winter Garden",NA
+"Winter Haven",NA
+"Winterville",NA
+"Wisbech",NA
+"Withamsville",NA
+"Woking",NA
+"Wollongong",NA
+"Wolverhampton",NA
+"Woodbury",NA
+"Woodley",NA
+"Woodstock",NA
+"Xiamen",NA
+"Xàbia",NA
+"Yamuna Nagar",NA
+"Yateley",NA
+"Yellowknife",NA
+"York",NA
+"Yorktown Heights",NA
+"Yosemite Lakes",NA
+"Zakopane",NA
+"Zandhoven",NA
+"Zeeland",NA
+"Zephyrhills West",NA
+"Zhuhai",NA
+"Zihuatanejo",NA
+"Zionsville",NA
+"Zvolen",NA
+"tp. Hòa Bình",NA
+"Ålesund",NA
+"Évian-les-Bains",NA
+"Šabac",NA
+"Šenbric",NA
+"Žilina",NA
